@@ -28,11 +28,15 @@
 			<ul class="tabs left">
 				<li><a href="#tabr1">ブロック</a></li>
 				<li id="code_tab"><a href="#tabr2">コード</a></li>
+				<li id="download_tab"><a id="download" href="#" download="test.html">ダウンロード</a></li>
 			</ul>
 			<div id="tabr1" class="tab-content">
 				<div id="loading_area">Edit Area:</div>
 			</div>
 			<div id="tabr2" class="tab-content">
+				<pre id="exampleArea"></pre>
+			</div>
+			<div id="tabr3" class="tab-content">
 				<pre id="exampleArea"></pre>
 			</div>
 			<hr />
@@ -62,6 +66,7 @@
 	<script type="text/javascript" src="js/mameblock.src.js"></script>
 	<script type="text/javascript" src="js/highlight.pack.js"></script>
 	<script type="text/javascript">
+
 	$(function() {
 		<!-- # Init -->
 		var codeArea = $("#exampleArea");
@@ -91,6 +96,8 @@
 			code = code.replace( /\[\-/g, '</');
 			code = code.replace( /\[/g, '<');
 			code = code.replace( /\]/g, '>');
+			code = code.replace( /\~/g, '-');
+
 
 			codeArea.text(code);
 			codeArea.each(function(i, block) {
@@ -98,7 +105,40 @@
 			});
 		};
 
+		function setCode2(code, codeArea) {
+
+			code = code.replace( /\[\-/g, '</');
+			code = code.replace( /\[/g, '<');
+			code = code.replace( /\]/g, '>');
+			code = code.replace( /\~/g, '-');
+
+
+			codeArea.text(code);
+			codeArea.each(function(i, block) {
+				//hljs.highlightBlock(block);
+			});
+			return code;
+		};
+
+		$("#download_tab").click(function() {
+
+								 var content = setCode2(MAME_BLOCK.getCodeBlock(), codeArea);;
+								 var blob = new Blob([ content ], { "type" : "text/plain" });
+
+								 if (window.navigator.msSaveBlob) {
+										 window.navigator.msSaveBlob(blob, "test.html");
+
+										 // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+										 window.navigator.msSaveOrOpenBlob(blob, "test.html");
+								 } else {
+										 document.getElementById("download").href = window.URL.createObjectURL(blob);
+								 }
+						 });
+
 	});
+
+
+
 	</script>
 
 </body>

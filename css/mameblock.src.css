@@ -2977,6 +2977,23 @@ a.trash:hover {
 	color: rgb(61, 61, 61);
 }
 
+.class-block {
+	background-color: #10ebeb; /* Asbestos */
+	color: rgb(61, 61, 61);
+}
+
+.bgclass-block {
+	background-color: #3b3b3b; /* Asbestos */
+	color: rgb(255, 255, 255);
+}
+
+.bgclass-block {
+	background-color: #b2bb00; /* Asbestos */
+	color: rgb(255, 255, 255);
+}
+
+
+
 .effect-block {
 	background-color: #e5e90d; /* Asbestos */
 	color: rgb(55, 55, 55);
