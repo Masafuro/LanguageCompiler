@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<head>
+	<!-- META -->
+	<title>Language Compiler from MameBlock</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/css/mameblock.src.css" media="all">
+	<link rel="stylesheet" type="text/css" href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/css/highlight_default.css" media="all">
+
+</head>
+<body class="">
+
+	<div class="grid">
+		<div class="col_12 column" style="margin-top:60px;">
+			<h1>Language Compiler</h1>
+			<p>for Webslides.</p>
+		<div class="clear">&nbsp;</div><hr>
+		<div class="col_12 column">
+			<ul class="button-bar">
+				<li class="first last"><a class="last" id="mameRun" href="javascript:void(0)"><i class="fa fa-play"></i> 実行</a></li>
+			</ul>
+			<p></p>
+			<!-- Tabs Left -->
+			<ul class="tabs left">
+				<li class="first current"><a href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/index.ja.html#tabr1">ブロック</a></li>
+				<li id="code_tab" class=""><a href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/index.ja.html#tabr2">コード</a></li>
+				<li id="download_tab"><a id="download" href="blob:file:///816e47c9-3b81-4385-9ec8-c04d112b9744" download="test.html">ダウンロード</a></li>
+				<li id="save_tab" class="last"><a id="save" href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/index.ja.html#" download="test.mbb">SAVE</a></li>
+			</ul>
+			<div id="tabr1" class="tab-content clearfix" style="display: block;">
+				<div id="loading_area"><div class="grid">
+	<!-- start of side-toolbox -->
+	<!-- Rules of HTMLtags [ = < , [- = </ , ] = > -->
+
+<!-- start panel -->
+<!--
+<h5 class="accordion h_icon">コード</h5>
+<div class="accordion_part">
+	<ol class="pallet-code block connect-area accordion_ol">
+
+		<li class="var-block">
+			<div class="block-body">
+				<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+			</div>
+			<div class="code-body">
+				<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+			</div>
+		</li>
+
+	</ol>
+</div>
+-->
+<!-- end panel -->
+
+	<div class="col_2" id="toolbox">
+		<!-- start panel -->
+		<h5 class="accordion h_icon open">スライド</h5>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="basic-block">
+						<div class="block-body">
+							スライドゾーン
+						</div>
+						<div class="code-body">
+							[article id="webslides"]
+						</div>
+						<ol>
+						</ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-article]
+						</div>
+				</li>
+
+				<li class="basic-block">
+						<div class="block-body">
+							真ん中に寄せる
+						</div>
+						<div class="code-body">
+							[div class="text-aligncenter"]
+						</div>
+						<ol>
+						</ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-div]
+						</div>
+				</li>
+
+
+
+
+<!--
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&subset=latin-ext" rel="stylesheet"/>
+    <link rel="stylesheet" type='text/css' media='all' href="./css/webslides.css"/>
+    <link rel="stylesheet" type='text/css' media='all' href="./css/svg-icons.css"/>
+-->
+
+				<li class="basic-block">
+						<div class="block-body">
+							Webslides はじめにする設定
+						</div>
+						<div class="code-body">
+							[link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet" -]
+							[link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/svg-icons.css" -]
+					    [link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/webslides.css" -]
+
+						</div>
+				</li>
+
+			<!--
+			https://raw.githubusercontent.com/webslides/WebSlides/master/static/js/webslides.min.js
+			<script src="./js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+		https://raw.githubusercontent.com/webslides/WebSlides/master/static/js/svg-icons.js
+    <script defer src="./js/svg-icons.js"></script>
+
+			-->
+
+			<li class="basic-block">
+					<div class="block-body">
+						Webslides 最後にする設定
+					</div>
+					<div class="code-body">
+						[script src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"][-script]
+						[script]
+							window.ws = new WebSlides();
+						[-script]
+						[script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"][-script]
+					</div>
+			</li>
+
+			<li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+					[section
+					</div>
+					<ol>
+						<li class="basic-block">
+								<div class="block-body">
+									クラス
+								</div>
+								<div class="code-body">class="</div>
+								<ol>
+
+								</ol>
+								<div class="block-body">
+
+								</div>
+								<div class="code-body">"]</div>
+							</li>
+							<li class="basic-block">
+									<div class="block-body">
+										内容
+									</div>
+									<div class="code-body">
+									</div>
+									<ol>
+
+									</ol>
+								</li>
+					</ol>
+
+					<div class="block-body">
+
+					</div>
+					<div class="code-body">
+					[-section]
+					</div>
+			</li>
+
+
+				<li class="basic-block">
+						<div class="block-body">
+							画像背景ページ 画像<span class="exp-body item1">url</span>
+						</div>
+						<div class="code-body">
+								[span class="background dark" style="background-image:url('<span class="exp-body item1"></span>]
+						</div>
+						<div class="block-body">
+
+						</div>
+						<div class="code-body">
+						[-span]
+						</div>
+				</li>
+
+				<li class="basic-block">
+						<div class="block-body">
+						クラス付き要素
+						</div>
+						<div class="code-body">
+						[div
+						</div>
+						<ol>
+							<li class="basic-block">
+									<div class="block-body">
+										クラス
+									</div>
+									<div class="code-body">class="</div>
+									<ol>
+
+									</ol>
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">"]</div>
+								</li>
+								<li class="basic-block">
+										<div class="block-body">
+											内容
+										</div>
+										<div class="code-body">
+										</div>
+										<ol>
+
+										</ol>
+									</li>
+						</ol>
+
+						<div class="block-body">
+
+						</div>
+						<div class="code-body">
+						[-div]
+						</div>
+				</li>
+
+
+
+
+				<li class="basic-block">
+						<div class="block-body">
+						箱枠
+						</div>
+						<div class="code-body">
+						[div class="wrap size-50"]
+						</div>
+						<ol>
+						</ol>
+						<div class="block-body">
+
+						</div>
+						<div class="code-body">
+						[-div]
+						</div>
+				</li>
+			</ol>
+		</div>
+		<!-- end panel -->
+
+		<!-- start panel -->
+		<h5 class="accordion h_icon">背景クラス</h5>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						黒 背景
+					</div>
+					<div class="code-body">
+						bg~black
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						apple風 背景
+					</div>
+					<div class="code-body">
+						bg~apple
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						primary 背景
+					</div>
+					<div class="code-body">
+						bg~primary
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						secondary 背景
+					</div>
+					<div class="code-body">
+						bg~secondary
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						light 背景
+					</div>
+					<div class="code-body">
+						bg~light
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						黒青 背景
+					</div>
+					<div class="code-body">
+						bg~black~blue
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						灰色 背景
+					</div>
+					<div class="code-body">
+						bg~gray
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						赤 背景
+					</div>
+					<div class="code-body">
+						bg~red
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						緑 背景
+					</div>
+					<div class="code-body">
+						bg~green
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						紺 背景
+					</div>
+					<div class="code-body">
+						bg~blue
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						紫 背景
+					</div>
+					<div class="code-body">
+						bg~purple
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						透過 黒 背景
+					</div>
+					<div class="code-body">
+						bg~trans~dark
+					</div>
+				</li>
+
+				<li class="bgclass-block">
+					<div class="block-body">
+						透過 灰 背景
+					</div>
+					<div class="code-body">
+						bg~trans~light
+					</div>
+				</li>
+
+			</ol>
+		</div>
+		<!-- end panel-->
+
+<!-- start panel -->
+		<h5 class="accordion h_icon">整列クラス</h5>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="alclass-block">
+					<div class="block-body">
+						中央
+					</div>
+					<div class="code-body">
+						content~center
+					</div>
+				</li>
+
+
+			</ol>
+		</div>
+<!-- end panel -->
+
+
+		<h5 class="accordion h_icon">効果</h5>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="effect-block">
+						<div class="block-body">
+							白ページ
+						</div>
+						<div class="code-body">
+						[section class="bg-white"]
+						</div>
+						<ol>
+						</ol>
+						<div class="block-body">
+
+						</div>
+						<div class="code-body">
+						[-section]
+						</div>
+				</li>
+
+			</ol>
+		</div>
+		<!-- end panel -->
+
+
+
+		<!-- start panel -->
+			<h5 class="accordion h_icon open">文字</h5>
+		<div class="accordion_part" style="display: block;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="if-block">
+					<div class="block-body">
+						文字 <span class="exp-body item1"></span>
+					</div>
+					<div class="code-body">
+						[p]<span class="exp-body item1"></span>[-p]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						太字 <span class="exp-body item1"></span>
+					</div>
+					<div class="code-body">
+						[strong]<span class="exp-body item1"></span>[-strong]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						h1文字 <span class="exp-body item1"></span>
+					</div>
+					<div class="code-body">
+						[h1]<span class="exp-body item1"></span>[-h1]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						h2文字 <span class="exp-body item1"></span>
+					</div>
+					<div class="code-body">
+						[h2]<span class="exp-body item1"></span>[-h2]
+					</div>
+				</li>
+
+
+				<li class="if-block">
+					<div class="block-body">
+						h3文字 <span class="exp-body item1"></span>
+					</div>
+					<div class="code-body">
+						[h3]<span class="exp-body item1"></span>[-h3]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						区切り線
+					</div>
+					<div class="code-body">
+						[hr]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						改行
+					</div>
+					<div class="code-body">
+						[br]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						箇条書き（ 1. ）
+					</div>
+					<div class="code-body">
+						[ol]
+					</div>
+						<ol>
+							<li class="if-block">
+								<div class="block-body">
+									・ <span class="exp-body item1"></span>
+								</div>
+								<div class="code-body">
+									[li]<span class="exp-body item1"></span>[-li]
+								</div>
+							</li>
+						</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+					[-ol]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						箇条書き（ ・ ）
+					</div>
+					<div class="code-body">
+						[ul]
+					</div>
+						<ol>
+							<li class="if-block">
+								<div class="block-body">
+									・ <span class="exp-body item1"></span>
+								</div>
+								<div class="code-body">
+									[li]<span class="exp-body item1"></span>[-li]
+								</div>
+							</li>
+						</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+					[-ul]
+					</div>
+				</li>
+
+
+
+
+				<li class="if-block">
+					<div class="block-body">
+						・ <span class="exp-body item1"></span>
+					</div>
+					<div class="code-body">
+						[li]<span class="exp-body item1"></span>[-li]
+					</div>
+				</li>
+
+			</ol>
+		</div>
+		<!-- end panel -->
+
+		<!-- start panel -->
+		<h5 class="accordion h_icon">初期設定</h5>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="loop-block">
+					<div class="block-body">
+						HTMLをはじめる
+					</div>
+					<div class="code-body">
+						[!DOCTYPE html]
+						[html]
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-html]
+					</div>
+				</li>
+
+				<li class="loop-block">
+					<div class="block-body">
+						初期設定
+					</div>
+					<div class="code-body">
+						[head]
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-head]
+					</div>
+				</li>
+
+				<li class="loop-block">
+					<div class="block-body">
+						内容
+					</div>
+					<div class="code-body">
+						[body]
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-body]
+					</div>
+				</li>
+
+
+
+				<!--<link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">-->
+				<li class="loop-block">
+					<div class="block-body">
+						css読み込み<span class="exp-body item1">url</span>
+					</div>
+					<div class="code-body">
+						[link rel="stylesheet" type='text/css' media='all' href="<span class="exp-body item1"></span>"]
+					</div>
+				</li>
+<!--	<script type="text/javascript" src="js/highlight.pack.js"></script> -->
+				<li class="loop-block">
+					<div class="block-body">
+						javascript読み込み<span class="exp-body item1">url</span>
+					</div>
+					<div class="code-body">
+						[script type="text/javascript" src="<span class="exp-body item1"></span>"][-script]
+					</div>
+				</li>
+
+<!-- <html lang="ja"> -->
+<li class="loop-block">
+	<div class="block-body">
+		言語<span class="exp-body item1">ja</span>
+	</div>
+	<div class="code-body">
+	 [html lang="<span class="exp-body item1">ja</span>"]
+	</div>
+</li>
+
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<li class="loop-block">
+	<div class="block-body">
+		IE互換
+	</div>
+	<div class="code-body">
+		[meta http-equiv="X-UA-Compatible" content="IE=edge"]
+	</div>
+</li>
+
+<!-- <meta charset="utf-8"> -->
+<li class="loop-block">
+	<div class="block-body">
+		文字コード<span class="exp-body item1">utf-8</span>
+	</div>
+	<div class="code-body">
+		[meta charset="<span class="exp-body item1">utf-8</span>"]
+	</div>
+</li>
+
+<!-- <title></title> -->
+<li class="loop-block">
+	<div class="block-body">
+		<span class="exp-body item1">タイトル</span>
+	</div>
+	<div class="code-body">
+		[title]<span class="exp-body item1">タイトル</span>[-title]
+	</div>
+</li>
+
+<!-- <meta name="description" content="">  -->
+
+<li class="loop-block">
+	<div class="block-body">
+		<span class="exp-body item1">ページの説明</span>
+	</div>
+	<div class="code-body">
+		[meta name="desscription" content="<span class="exp-body item1">ページの説明</span>"]
+	</div>
+</li>
+
+<!-- <meta name="author" content=""> -->
+<li class="loop-block">
+	<div class="block-body">
+		<span class="exp-body item1">作者名</span>
+	</div>
+	<div class="code-body">
+		[meta name="author" content="<span class="exp-body item1">作者名</span>"]
+	</div>
+</li>
+
+
+
+
+			</ol>
+		</div>
+		<!-- end panel -->
+		<!-- start panel -->
+		<h5 class="accordion h_icon">コード</h5>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="var-block">
+					<div class="block-body">
+						<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+					</div>
+					<div class="code-body">
+						<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+					</div>
+				</li>
+
+
+
+			</ol>
+		</div>
+	</div>
+	<!-- end of side-toolbox -->
+
+	<!-- Main edit area -->
+	<div class="col_9">
+		<ol class="block connect-area serialize">
+
+			<li class="loop-block">
+				<div class="block-body">
+					HTMLをはじめる
+				</div>
+				<div class="code-body">
+					[!DOCTYPE html]
+					[html]
+				</div>
+				<ol>
+					<li class="loop-block">
+						<div class="block-body">
+							初期設定
+						</div>
+						<div class="code-body">
+							[head]
+						</div>
+						<ol>
+							<li class="loop-block">
+								<div class="block-body">
+									言語<span class="exp-body item1">ja</span>
+								</div>
+								<div class="code-body">
+								 [html lang="<span class="exp-body item1">ja</span>"]
+								</div>
+							</li>
+							<li class="loop-block">
+								<div class="block-body">
+									IE互換
+								</div>
+								<div class="code-body">
+									[meta http-equiv="X-UA-Compatible" content="IE=edge"]
+								</div>
+							</li>
+
+							<!-- <meta charset="utf-8"> -->
+							<li class="loop-block">
+								<div class="block-body">
+									文字コード<span class="exp-body item1">utf-8</span>
+								</div>
+								<div class="code-body">
+									[meta charset="<span class="exp-body item1">utf-8</span>"]
+								</div>
+							</li>
+
+							<!-- <title></title> -->
+							<li class="loop-block">
+								<div class="block-body">
+									<span class="exp-body item1">タイトル</span>
+								</div>
+								<div class="code-body">
+									[title]<span class="exp-body item1">タイトル</span>[-title]
+								</div>
+							</li>
+
+							<!-- <meta name="description" content="">  -->
+
+							<li class="loop-block">
+								<div class="block-body">
+									<span class="exp-body item1">ページの説明</span>
+								</div>
+								<div class="code-body">
+									[meta name="desscription" content="<span class="exp-body item1">ページの説明</span>"]
+								</div>
+							</li>
+
+							<!-- <meta name="author" content=""> -->
+							<li class="loop-block">
+								<div class="block-body">
+									<span class="exp-body item1">作者名</span>
+								</div>
+								<div class="code-body">
+									[meta name="author" content="<span class="exp-body item1">作者名</span>"]
+								</div>
+							</li>
+							<li class="basic-block">
+									<div class="block-body">
+										Webslides はじめにする設定
+									</div>
+									<div class="code-body">
+										[link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet"-]
+										[link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/svg-icons.css"-]
+										[link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/webslides.css"-]
+									</div>
+							</li>
+
+						</ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-head]
+						</div>
+					</li>
+
+					<li class="loop-block">
+						<div class="block-body">
+							内容
+						</div>
+						<div class="code-body">
+							[body]
+						</div>
+						<ol>
+							<li class="basic-block">
+									<div class="block-body">
+										スライドゾーン
+									</div>
+									<div class="code-body">
+										[article id="webslides"]
+									</div>
+									<ol>
+									<li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+					[section
+					</div>
+					<ol>
+						<li class="basic-block">
+								<div class="block-body">
+									クラス
+								</div>
+								<div class="code-body">class="</div>
+								<ol>
+
+								<li class="if-block">
+					<div class="block-body">
+						文字 <span class="exp-body item1"></span>
+					</div>
+					<div class="code-body">
+						[p]<span class="exp-body item1"></span>[-p]
+					</div>
+				</li></ol>
+								<div class="block-body">
+
+								</div>
+								<div class="code-body">"]</div>
+							</li>
+							<li class="basic-block">
+									<div class="block-body">
+										内容
+									</div>
+									<div class="code-body">
+									</div>
+									<ol>
+
+									</ol>
+								</li>
+					</ol>
+
+					<div class="block-body">
+
+					</div>
+					<div class="code-body">
+					[-section]
+					</div>
+			</li></ol>
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[-article]
+									</div>
+							</li>
+
+							<li class="basic-block">
+							<div class="block-body">
+								Webslides 最後にする設定
+							</div>
+							<div class="code-body">
+								[script src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"][-script]
+								[script]
+									window.ws = new WebSlides();
+								[-script]
+								[script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"][-script]
+							</div>
+						</li></ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-body]
+						</div>
+					</li>
+
+
+				</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-html]
+				</div>
+			</li>
+
+
+		</ol>
+	</div>
+	<!-- end of Main edit area -->
+
+	<!-- trash-can -->
+	<div class="col_1">
+		<a class="trash" href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/index.ja.html#" onclick="MAME_BLOCK.clearTrash()" alt="trash"></a>
+		<ol id="trash-can" class="trash-code block connect-area"></ol>
+	</div>
+	<!-- end of trash-can -->
+
+</div> <!-- End of grid -->
+</div>
+			</div>
+			<div id="tabr2" class="tab-content clearfix" style="display: none;">
+				<pre id="exampleArea" class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;html lang = "ja"&gt;
+&lt;meta http - equiv = "X-UA-Compatible"
+    content = "IE=edge"
+&gt;
+&lt;meta charset = "utf-8"&gt;
+&lt;title&gt; タイトル&lt;/title&gt;
+    &lt;meta name = "desscription"
+        content = "ページの説明"
+    &gt;
+    &lt;meta name = "author"
+        content = "作者名"
+    &gt;
+    &lt;link href = "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+        rel = "stylesheet" -
+    &gt;
+    &lt;link rel = "stylesheet"
+        type = 'text/css'
+        media = 'all'
+        href = "https://cdn.rawgit.com/webslides/WebSlides/master/static/css/svg-icons.css" -
+    &gt;
+    &lt;link rel = "stylesheet"
+        type = 'text/css'
+        media = 'all'
+        href = "https://cdn.rawgit.com/webslides/WebSlides/master/static/css/webslides.css" -
+    &gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;article id = "webslides"&gt;
+    &lt;/article&gt;
+    &lt;script src = "https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+window.ws = new WebSlides();
+&lt;/script&gt;
+&lt;script defer src = "https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+			</div>
+	
+			<div class="clear">&nbsp;</div><hr>
+
+		<div class="col_12 column" id="footer">
+			Language Compiler : Copyright 2018 FurukawaKikaku All Rights Reserved.
+			Mameblock : Copyright 2015 Yutaka Kachi All Rights Reserved.
+		</div>
+	</div> <!-- End Grid -->
+
+	<!-- edit dialog -->
+    <div id="modal-window">
+		<a id="editor_close" href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/index.ja.html#">[Close]</a>
+		<div id="loading_area"></div>
+    </div>
+	<!-- express dialog -->
+	<div id="modal-express" style="display: none; position: absolute; z-index: 0; left: 50%; top: 50%;">
+		<div class="modal-body">
+			<label for="expModalText">Edit expression</label><br>
+			<input id="expModalText" type="text">
+		</div>
+		<a class="modal_close" href="file:///C:/Users/masafuro/Desktop/LanguageCompiler/index.ja.html#">[OK]</a>
+	</div>
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="file:///C:/Users/masafuro/Desktop/LanguageCompiler/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="file:///C:/Users/masafuro/Desktop/LanguageCompiler/js/mameblock.src.js"></script>
+	<script type="text/javascript" src="file:///C:/Users/masafuro/Desktop/LanguageCompiler/js/highlight.pack.js"></script>
+	<script type="text/javascript">
+
+	$(function() {
+		<!-- # Init -->
+		var codeArea = $("#exampleArea");
+		var codeText = MAME_BLOCK.init("#loading_area", "mameBlock_template.ja.html");
+		/* wait for DOM building */
+		var wait0 = setTimeout(function() {
+			setCode(MAME_BLOCK.getCodeBlock(), codeArea);
+		}, 500);
+
+		<!-- # Run -->
+		$("#mameRun").click(function() {
+			<!-- get code -->
+			var codeText = MAME_BLOCK.getCodeBlock();
+			setCode(codeText, codeArea);
+			var mameExec = new Function(codeText);
+			mameExec();
+		});
+
+		<!-- # reload to Code tab -->
+		$("#code_tab").click(function() {
+			setCode(MAME_BLOCK.getCodeBlock(), codeArea);
+		});
+
+		<!-- ## set code and syntax highlight -->
+		function setCode(code, codeArea) {
+
+			code = code.replace( /\[\-/g, '</');
+			code = code.replace( /\[/g, '<');
+			code = code.replace( /\]/g, '>');
+			code = code.replace( /\~/g, '-');
+
+
+			codeArea.text(code);
+			codeArea.each(function(i, block) {
+				//hljs.highlightBlock(block);
+			});
+		};
+
+		function setCode2(code, codeArea) {
+
+			code = code.replace( /\[\-/g, '</');
+			code = code.replace( /\[/g, '<');
+			code = code.replace( /\]/g, '>');
+			code = code.replace( /\~/g, '-');
+
+
+			codeArea.text(code);
+			codeArea.each(function(i, block) {
+				//hljs.highlightBlock(block);
+			});
+			return code;
+		};
+
+		$("#download_tab").click(function() {
+
+								 var content = setCode2(MAME_BLOCK.getCodeBlock(), codeArea);
+								 var blob = new Blob([ content ], { "type" : "text/plain" });
+
+								 if (window.navigator.msSaveBlob) {
+										 window.navigator.msSaveBlob(blob, "test.html");
+
+										 // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+										 window.navigator.msSaveOrOpenBlob(blob, "test.html");
+								 } else {
+										 document.getElementById("download").href = window.URL.createObjectURL(blob);
+								 }
+						 });
+
+						 $("#save_tab").click(function() {
+
+				 								 var content = codeArea;
+				 								 var blob = new Blob([ content ], { "type" : "text/plain" });
+
+				 								 if (window.navigator.msSaveBlob) {
+				 										 window.navigator.msSaveBlob(blob, "test.mbb");
+
+				 										 // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+				 										 window.navigator.msSaveOrOpenBlob(blob, "test.mbb");
+				 								 } else {
+				 										 document.getElementById("download").href = window.URL.createObjectURL(blob);
+				 								 }
+				 						 });
+
+	});
+
+
+
+	</script>
+
+
+
+</div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div class="lean-overlay" style="display: none; position: fixed; z-index: 0; top: 0px; left: 0px; height: 100%; width: 100%; background: rgb(0, 0, 0); opacity: 0.5; overflow: auto;"></div></body>
