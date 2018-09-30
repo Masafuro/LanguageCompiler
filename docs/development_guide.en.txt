@@ -1,0 +1,150 @@
+Mameblock.js Development Guide
+=================================
+
+Mameblock.js is a Javascript Library of the Web front end for development a visual programming editor. 
+
+This document explain the internal structure for development of Web apps using Mameblock.js.
+
+
+
+Description
+------------
+
+Mameblock.js has just only 100 lines of Javascript code and some OSS libraries.  Block of drag-and-drop, are using jquery-sortable. jquery-sortable is jquery plug-in, can drag and drop the nested elements.
+
+It is use HTML Kickstarter for Web page and UI. You can use your favorite CSS framework.
+
+
+Files
+------------
+
+This section explain about files of mameblock.js.
+
+
+* File structure
+
+This is file structure of mameblock.js.
+
+
+ MameBlock
+ | 
+ +---docs : Documents
+ | 
+ +---css
+ |   |
+ |   +--- mameblock.min.css
+ |   +--- mameblock.src.css
+ |   |
+ |   +---fonts
+ |   +---img
+ |   +---src
+ |
+ \---js : JavaScript files
+     |
+     +--- jquery-1.11.2.min.js
+     +--- mameblock.min.js
+     +--- mameblock.src.js
+     |
+     +---src
+
+
+
+There are most important files of mameblock.js.
+
+\css\srcフォルダのcssファイルと、\js\srcフォルダのJavascriptファイルは、
+
+gulpfile.js transrate from \css\src folder's css files and \js\src folder's  Javascript files to mameblock.*.css and mameblock.*.js.
+
+
+Functions
+------------
+
+This section explain about functions and code of mameblock.js.
+
+
+### Page Design
+
+- mameblock has 3 areas - tool palette, block editing area and trash-can.
+- Click expression in Block, Express line editor will pop up.
+
+
+
+### Tool Pallet area
+
+Blocks for assembling the code is in the tool palette.
+Code group fold each block of the tool palette.
+Block can drag-and-drop from the tool palette to the main editing area.
+
+
+
+### Blocks
+
+Block is composed of <li> tag and can drag and drop while nested by jquery-sortable.
+
+The <li> element has text to be displayed on the block (class = "block-body") and text to be output for code(class = "code-body").
+If you need convert-logic from block-body to code-body, it is necessary to own description.
+
+Text of <span> element with a class = "exp-body" edit in Express Line Editor.
+
+
+If there are multiple expressions in a block, assign classes for each expression class = "item1", "item2".
+
+
+ Example
+
+ <li class="basic-block">
+ 	<div class="block-body">
+ 		var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);
+ 	</div>
+ 	<div class="code-body">
+ 		var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);
+ 	</div>
+ </li>
+
+
+
+### Main editing area
+
+Main editing area is a page to edit the code in the block style. 
+In this area you can place a code-block by drag-and-drop. 
+Code-block has text of code.
+Click the "Code" tab, display only the code.
+
+
+
+### Trash Can area
+
+Unnecessary block is discarded in the trash-can by drag-and-drop.
+Discarded block is displayed just below the trash-can.
+This block can be moved to the main editing area again.
+If you double-click the trash-can, discarded block is completely deleted.
+
+
+
+### Express line Editor
+
+Click the expression of the block, will pop up Express line Editor.
+You can edit expression by this Express line Editor.
+Express line Editor use Bootstrap Modals include index.html
+
+
+
+
+API
+---------
+
+
+### MAME_BLOCK.init("#loading_area", "mameBlock_template.html");
+
+init for mameblock.
+
+ #loading_area : frame of edit dialog in parent html file.
+
+ mameBlock_template.html : template file to tool pallette and edit area
+
+
+### MAME_BLOCK.getCodeBlock()
+
+get code from blocks.
+
+

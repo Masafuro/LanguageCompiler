@@ -1,0 +1,13 @@
+{
+  "name": "MameBlock",
+  "description": "MameBlock.js for FirefoxOS",
+  "type": "web",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "yutaka kachi",
+    "url": "https://github.com/ycatch"
+  },
+  "icons": {
+    "128": "/style/icons/sensor.png"
+  }
+}
