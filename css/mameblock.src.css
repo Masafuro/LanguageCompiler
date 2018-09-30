@@ -2973,9 +2973,15 @@ a.trash:hover {
 
 /* Basic */
 .basic-block {
-	background-color: #17a737; /* Asbestos */
-	color: rgb(255, 255, 255);
+	background-color: #dedede; /* Asbestos */
+	color: rgb(61, 61, 61);
 }
+
+.effect-block {
+	background-color: #e5e90d; /* Asbestos */
+	color: rgb(55, 55, 55);
+}
+
 
 /* Comment */
 .comment-block {
