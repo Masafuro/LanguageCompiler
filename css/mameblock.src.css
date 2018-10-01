@@ -2987,6 +2987,12 @@ a.trash:hover {
 	color: rgb(255, 255, 255);
 }
 
+.start-block {
+	background-color: #dadada; /* Asbestos */
+	color: rgb(255, 255, 255);
+}
+
+
 .bgclass-block {
 	background-color: #b2bb00; /* Asbestos */
 	color: rgb(255, 255, 255);
@@ -3048,10 +3054,23 @@ a.trash:hover {
   margin: 10px;
 }
 
+/* 138 13a */
 .h_icon.open:before {
   content: "\f13a";
   font-family: FontAwesome;
 }
+
+.h_icon2:before {
+  content: "\f105";
+  font-family: FontAwesome;
+  margin: 3px;
+}
+
+.h_icon2.open:before {
+  content: "\f107";
+  font-family: FontAwesome;
+}
+
 
 #lean_overlay {
     position: fixed;
