@@ -9,6 +9,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/css/mameblock.src.css" media="all" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ycatch/mameblock.js/master/css/highlight_default.css" media="all" />
 
 </head>
@@ -16,7 +17,7 @@
 
 	<div class="grid">
 		<div class="col_12" style="margin-top:60px;">
-			<h1>Language Compiler</h1>
+			<h3 style="display:inline;">Language Compiler</h3>
 			<p>for Webslides.</p>
 		<hr />
 		<div class="col_12">
@@ -28,8 +29,8 @@
 			<ul class="tabs left">
 				<li><a href="#tabr1">ブロック</a></li>
 				<li id="code_tab"><a href="#tabr2">コード</a></li>
-				<li id="download_tab"><a id="download" href="#" download="test.html">ダウンロード</a></li>
-				<li id="save_tab"><a id="save" href="#" download="save.html">SAVE</a></li>
+				<li id="download_tab"><a id="download" href="#" download="test.html">スライド出力</a></li>
+				<li id="save_tab"><a id="save" href="#" download="save.html">ブロック保存</a></li>
 
 			</ul>
 			<div id="tabr1" class="tab-content">
@@ -90,14 +91,21 @@
 			setCode(MAME_BLOCK.getCodeBlock(), codeArea);
 		});
 
-
-		function setCode(code, codeArea) {
+		function compile(code){
 
 			code = code.replace( /\[\-/g, '</');
+			code = code.replace( /\%/g, '');
 			code = code.replace( /\[/g, '<');
 			code = code.replace( /\]/g, '>');
 			code = code.replace( /\~/g, '-');
 
+			return code;
+		};
+
+
+		function setCode(code, codeArea) {
+
+			code = compile(code);
 
 			codeArea.text(code);
 			codeArea.each(function(i, block) {
@@ -107,11 +115,7 @@
 
 		function setCode2(code, codeArea) {
 
-			code = code.replace( /\[\-/g, '</');
-			code = code.replace( /\[/g, '<');
-			code = code.replace( /\]/g, '>');
-			code = code.replace( /\~/g, '-');
-
+			code = compile(code);
 
 			codeArea.text(code);
 			codeArea.each(function(i, block) {
