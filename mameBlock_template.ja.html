@@ -1,6 +1,6 @@
 <div class="grid">
 	<!-- start of side-toolbox -->
-	<!-- Rules of HTMLtags [ = < , [- = </ , ] = > -->
+	<!-- Rules of HTMLtags [ = < , [- = </ , ] = > , %改行を防ぐ？？-->
 
 	<!-- start panel -->
 	<!--
@@ -39,19 +39,6 @@
 						[section
 					</div>
 					<ol>
-						<li class="basic-block">
-							<div class="block-body">
-								うら画像<span class="exp-body item1">url</span>
-							</div>
-							<div class="code-body">
-								style="background-image:url('<span class="exp-body item1">url</span>
-							</div>
-							<div class="block-body">
-							</div>
-							<div class="code-body">
-								%')"
-							</div>
-						</li>
 
 						<li class="basic-block"> <!--スライド効果 -->
 							<div class="block-body">
@@ -116,71 +103,14 @@
 					</div>
 				</li>
 
-
-				<li class="basic-block">
-					<div class="block-body">
-						画像背景ページ 画像<span class="exp-body item1">url</span>
-					</div>
-					<div class="code-body">
-						[span class="background dark" style="background-image:url('<span class="exp-body item1"></span>]
-					</div>
-					<div class="block-body">
-
-					</div>
-					<div class="code-body">
-						[-span]
-					</div>
-				</li>
-
 			</ol>
 		</div>
 		<!-- end panel -->
 
 
-		<h6 class="accordion h_icon">効果</h6>
+		<h6 class="accordion h_icon">スライド効果</h6>
 		<div class="accordion_part">
 			<ol class="pallet-code block connect-area accordion_ol">
-
-				<li class="basic-block">
-					<div class="block-body">
-						効果をつける
-					</div>
-					<div class="code-body">
-						[div
-					</div>
-					<ol>
-						<li class="basic-block">
-							<div class="block-body">
-								効果
-							</div>
-							<div class="code-body">class="</div>
-							<ol>
-
-							</ol>
-							<div class="block-body">
-
-							</div>
-							<div class="code-body">"]</div>
-						</li>
-						<li class="basic-block">
-							<div class="block-body">
-								内容
-							</div>
-							<div class="code-body">
-							</div>
-							<ol>
-
-							</ol>
-						</li>
-					</ol>
-
-					<div class="block-body">
-
-					</div>
-					<div class="code-body">
-						[-div]
-					</div>
-				</li>
 
 				<!-- start panel -->
 				<h7 class="accordion h_icon">整列</h7>
@@ -192,9 +122,57 @@
 								中央
 							</div>
 							<div class="code-body">
-								content~center
+								%content~center
 							</div>
 						</li>
+
+						<li class="alclass-block">
+							<div class="block-body">
+								右寄せ
+							</div>
+							<div class="code-body">
+								%content~right
+							</div>
+						</li>
+
+						<li class="alclass-block">
+							<div class="block-body">
+								左寄せ
+							</div>
+							<div class="code-body">
+								%content~left
+							</div>
+						</li>
+
+						<li class="alclass-block">
+							<div class="block-body">
+								右寄せ
+							</div>
+							<div class="code-body">
+								%content~right
+							</div>
+						</li>
+
+						<li class="alclass-block">
+							<div class="block-body">
+								上寄せ
+							</div>
+							<div class="code-body">
+								%slide~top
+							</div>
+						</li>
+
+						<li class="alclass-block">
+							<div class="block-body">
+								下寄せ
+							</div>
+							<div class="code-body">
+								slide~bottom
+							</div>
+						</li>
+
+
+
 
 
 					</ol>
@@ -202,9 +180,24 @@
 				<!-- end panel -->
 				<br>
 				<!-- start panel -->
-				<h7 class="accordion h_icon">【うら】の色</h7>
+				<h7 class="accordion h_icon">【うら】</h7>
 				<div class="accordion_part">
 					<ol class="pallet-code block connect-area accordion_ol">
+
+						<li class="basic-block">
+							<div class="block-body">
+								うら画像<span class="exp-body item1">url</span>
+							</div>
+							<div class="code-body">
+								style="background-image:url('<span class="exp-body item1">url</span>
+							</div>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								%')"
+							</div>
+						</li>
+
 
 						<li class="bgclass-block">
 							<div class="block-body">
@@ -289,9 +282,71 @@
 
 					</ol>
 				</div>
+
+				<br>
+
+						<h7 class="accordion h_icon">アニメーション</h7>
+						<div class="accordion_part">
+							<ol class="pallet-code block connect-area accordion_ol">
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										浮きでて入る
+									</div>
+									<div class="code-body">
+										fadeIn
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										浮き出て上がる
+									</div>
+									<div class="code-body">
+										fadeInUp
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										広がって入る
+									</div>
+									<div class="code-body">
+										zoomIn
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										左から入る
+									</div>
+									<div class="code-body">
+										slideInLeft
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										右から入る
+									</div>
+									<div class="code-body">
+										slideInRight
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										おそく
+									</div>
+									<div class="code-body">
+										slow
+									</div>
+								</li>
+
+							</ol>
+						</div>
+
 				<!-- end panel-->
-
-
 			</ol>
 		</div>
 		<!-- end panel -->
@@ -301,51 +356,128 @@
 		<div class="accordion_part">
 			<ol class="pallet-code block connect-area accordion_ol">
 
-				<li class="if-block">
-					<div class="block-body">
-						文字 <span class="exp-body item1"></span>
-					</div>
-					<div class="code-body">
-						[p]<span class="exp-body item1"></span>[-p]
-					</div>
-				</li>
+				<h7 class="accordion h_icon">文字種類</h7>
+				<div class="accordion_part">
+					<ol class="pallet-code block connect-area accordion_ol">
 
-				<li class="if-block">
-					<div class="block-body">
-						太字 <span class="exp-body item1"></span>
-					</div>
-					<div class="code-body">
-						[strong]<span class="exp-body item1"></span>[-strong]
-					</div>
-				</li>
+						<li class="if-block">
+							<div class="block-body">
+								p <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[p]<span class="exp-body item1"></span>[-p]
+							</div>
+						</li>
 
-				<li class="if-block">
-					<div class="block-body">
-						h1文字 <span class="exp-body item1"></span>
-					</div>
-					<div class="code-body">
-						[h1]<span class="exp-body item1"></span>[-h1]
-					</div>
-				</li>
+						<li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1"></span>[-h1]
+							</div>
+						</li>
 
-				<li class="if-block">
-					<div class="block-body">
-						h2文字 <span class="exp-body item1"></span>
-					</div>
-					<div class="code-body">
-						[h2]<span class="exp-body item1"></span>[-h2]
-					</div>
-				</li>
+						<li class="if-block">
+							<div class="block-body">
+								h2<span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[h2]<span class="exp-body item1"></span>[-h2]
+							</div>
+						</li>
 
 
-				<li class="if-block">
-					<div class="block-body">
-						h3文字 <span class="exp-body item1"></span>
-					</div>
-					<div class="code-body">
-						[h3]<span class="exp-body item1"></span>[-h3]
-					</div>
-				</li>
+						<li class="if-block">
+							<div class="block-body">
+								h3 <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[h3]<span class="exp-body item1"></span>[-h3]
+							</div>
+						</li>
+
+					</ol>
+				</div>
+
+				<br>
+
+				<h7 class="accordion h_icon">文字効果</h7>
+				<div class="accordion_part">
+					<ol class="pallet-code block connect-area accordion_ol">
+
+						<li class="if-block">
+							<div class="block-body">
+								太字 <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[strong]<span class="exp-body item1"></span>[-strong]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								箇条書き（ 1. ）
+							</div>
+							<div class="code-body">
+								[ol]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1"></span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1"></span>[-li]
+									</div>
+								</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ol]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								箇条書き（ ・ ）
+							</div>
+							<div class="code-body">
+								[ul]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1"></span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1"></span>[-li]
+									</div>
+								</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ul]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1"></span>[-li]
+							</div>
+						</li>
+
+					</ol>
+				</div>
+
+
+
+
 
 				<li class="if-block">
 					<div class="block-body">
@@ -365,65 +497,6 @@
 					</div>
 				</li>
 
-				<li class="if-block">
-					<div class="block-body">
-						箇条書き（ 1. ）
-					</div>
-					<div class="code-body">
-						[ol]
-					</div>
-					<ol>
-						<li class="if-block">
-							<div class="block-body">
-								・ <span class="exp-body item1"></span>
-							</div>
-							<div class="code-body">
-								[li]<span class="exp-body item1"></span>[-li]
-							</div>
-						</li>
-					</ol>
-					<div class="block-body">
-					</div>
-					<div class="code-body">
-						[-ol]
-					</div>
-				</li>
-
-				<li class="if-block">
-					<div class="block-body">
-						箇条書き（ ・ ）
-					</div>
-					<div class="code-body">
-						[ul]
-					</div>
-					<ol>
-						<li class="if-block">
-							<div class="block-body">
-								・ <span class="exp-body item1"></span>
-							</div>
-							<div class="code-body">
-								[li]<span class="exp-body item1"></span>[-li]
-							</div>
-						</li>
-					</ol>
-					<div class="block-body">
-					</div>
-					<div class="code-body">
-						[-ul]
-					</div>
-				</li>
-
-
-
-
-				<li class="if-block">
-					<div class="block-body">
-						・ <span class="exp-body item1"></span>
-					</div>
-					<div class="code-body">
-						[li]<span class="exp-body item1"></span>[-li]
-					</div>
-				</li>
 
 			</ol>
 		</div>
@@ -635,8 +708,6 @@
 	<!-- end panel -->
 
 
-
-
 </div>
 <!-- end block area -->
 
@@ -751,6 +822,78 @@
 									[article id="webslides"]
 								</div>
 								<ol>
+									<li class="basic-block">
+										<div class="block-body">
+											ページ
+										</div>
+										<div class="code-body">
+											[section
+										</div>
+										<ol>
+
+											<li class="basic-block"> <!--スライド効果 -->
+												<div class="block-body">
+													スライド効果
+												</div>
+												<div class="code-body">class="</div>
+												<ol>
+
+												</ol>
+												<div class="block-body">
+
+												</div>
+												<div class="code-body">"]</div>
+											</li>
+
+													<li class="basic-block">
+														<div class="block-body">
+														</div>
+														<div class="code-body">
+															[div
+														</div>
+														<ol>
+															<li class="basic-block">
+																<div class="block-body">
+																	中身効果
+																</div>
+																<div class="code-body">class="</div>
+																<ol>
+
+																</ol>
+																<div class="block-body">
+
+																</div>
+																<div class="code-body">"]</div>
+															</li>
+															<li class="basic-block">
+																<div class="block-body">
+																	中身
+																</div>
+																<div class="code-body">
+																</div>
+																<ol>
+
+																</ol>
+															</li>
+														</ol>
+
+														<div class="block-body">
+
+														</div>
+														<div class="code-body">
+															[-div]
+														</div>
+													</li>
+
+												</ol>
+
+										<div class="block-body">
+										</div>
+										<div class="code-body">
+											[-section]
+										</div>
+									</li>
+
 								</ol>
 								<div class="block-body">
 								</div>
