@@ -1,6 +1,6 @@
 <div class="grid">
 	<!-- start of side-toolbox -->
-	<!-- Rules of HTMLtags [ = < , [- = </ , ] = >  , ~ = - ,% = 改行を防ぐ？？-->
+	<!-- Rules of HTMLtags [ = < , [- = </ , ] = >  , ~ = - ,% = 改行を防ぐ, %% = 空白-->
 
 	<!-- start panel -->
 	<!--
@@ -65,7 +65,7 @@
 											<div class="block-body">
 												パーツ効果
 											</div>
-											<div class="code-body">class="</div>
+											<div class="code-body">class="wrap </div>
 											<ol>
 
 											</ol>
@@ -113,28 +113,22 @@
 			<ol class="pallet-code block connect-area accordion_ol">
 
 				<!-- start panel -->
-				<h7 class="accordion h_icon">【うら】</h7>
+				<h7 class="accordion h_icon">【背景】</h7>
 				<div class="accordion_part">
 					<ol class="pallet-code block connect-area accordion_ol">
 
-						<li class="basic-block">
+						<li class="bgclass-block">
 							<div class="block-body">
-								うら画像<span class="exp-body item1">url</span>
+								【背景】白
 							</div>
 							<div class="code-body">
-								style="background-image:url('<span class="exp-body item1">url</span>
-							</div>
-							<div class="block-body">
-							</div>
-							<div class="code-body">
-								%')"
+								bg~white
 							</div>
 						</li>
 
-
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】黒
+								【背景】黒
 							</div>
 							<div class="code-body">
 								bg~black
@@ -143,7 +137,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】apple風
+								【背景】apple風
 							</div>
 							<div class="code-body">
 								bg~apple
@@ -152,7 +146,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】灰色
+								【背景】灰色
 							</div>
 							<div class="code-body">
 								bg~gray
@@ -161,7 +155,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】赤
+								【背景】赤
 							</div>
 							<div class="code-body">
 								bg~red
@@ -170,7 +164,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】緑
+								【背景】緑
 							</div>
 							<div class="code-body">
 								bg~green
@@ -179,7 +173,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】紺
+								【背景】紺
 							</div>
 							<div class="code-body">
 								bg~blue
@@ -188,7 +182,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】紫
+								【背景】紫
 							</div>
 							<div class="code-body">
 								bg~purple
@@ -197,7 +191,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】黒 透過
+								【背景】黒 透過
 							</div>
 							<div class="code-body">
 								bg~trans~dark
@@ -206,7 +200,7 @@
 
 						<li class="bgclass-block">
 							<div class="block-body">
-								【うら】灰 透過
+								【背景】灰 透過
 							</div>
 							<div class="code-body">
 								bg~trans~light
@@ -451,7 +445,7 @@
 			<span class="exp-body item1">URL</span>
 		</div>
 		<div class="code-body">
-			 src="<span class="exp-body item1">独自コード( []記法にて書くこと)</span>"
+			 src="<span class="exp-body item1">URL</span>"
 		</div>
 
 		<div class="block-body">
@@ -483,6 +477,71 @@
 			]
 		</div>
 	</li>
+
+	<li class="var-block">
+		<div class="block-body">
+			背景画像<span class="exp-body item1">URL</span>（スライド効果の後にいれる）
+		</div>
+		<div class="code-body">
+			[span style="background-image:url('<span class="exp-body item1">URL</span>')"
+		</div>
+		<div class="block-body">
+				背景効果
+		</div>
+		<div class="code-body">
+			class="
+		</div>
+		<ol>
+			<li class="bgclass-block">
+				<div class="block-body">
+					【背景効果】なし
+				</div>
+				<div class="code-body">
+					%background
+				</div>
+			</li>
+		</ol>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			"
+		</div>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			][-span]
+		</div>
+	</li>
+
+	<li class="bgclass-block">
+		<div class="block-body">
+			【背景効果】なし
+		</div>
+		<div class="code-body">
+			%background
+		</div>
+	</li>
+
+	<li class="bgclass-block">
+		<div class="block-body">
+			【背景効果】背景色 透過
+		</div>
+		<div class="code-body">
+			%background dark
+		</div>
+	</li>
+
+	<li class="bgclass-block">
+		<div class="block-body">
+			【背景効果】白透過
+		</div>
+		<div class="code-body">
+			%background light
+		</div>
+	</li>
+
+
+
 
 	</ol>
 </div>
@@ -674,6 +733,16 @@
 						<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
 					</div>
 				</li>
+
+				<li class="var-block">
+					<div class="block-body">
+						<span class="exp-body item1">コメント（ページの最後にいれる）</span>
+					</div>
+					<div class="code-body">
+						[!-- <span class="exp-body item1">コメント</span> --]
+					</div>
+				</li>
+
 
 
 
@@ -989,7 +1058,7 @@
 																<div class="block-body">
 																	パーツ効果
 																</div>
-																<div class="code-body">class="</div>
+																<div class="code-body">class="wrap </div>
 																<ol>
 
 																</ol>
