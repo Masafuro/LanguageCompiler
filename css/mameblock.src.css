@@ -2971,6 +2971,10 @@ a.trash:hover {
 /** colored by Flat-UI's color swatches **/
 /** http://designmodo.github.io/Flat-UI/ **/
 
+#toolbox{
+  position:relative;
+}
+
 /* Basic */
 .basic-block {
 	background-color: #dedede; /* Asbestos */
