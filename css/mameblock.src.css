@@ -2998,6 +2998,11 @@ a.trash:hover {
 	color: rgb(255, 255, 255);
 }
 
+.alclass-block {
+	background-color: #717171; /* Asbestos */
+	color: rgb(255, 255, 255);
+}
+
 
 
 .effect-block {
