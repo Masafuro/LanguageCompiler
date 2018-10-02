@@ -1,6 +1,6 @@
 <div class="grid">
 	<!-- start of side-toolbox -->
-	<!-- Rules of HTMLtags [ = < , [- = </ , ] = > , %改行を防ぐ？？-->
+	<!-- Rules of HTMLtags [ = < , [- = </ , ] = >  , ~ = - ,% = 改行を防ぐ？？-->
 
 	<!-- start panel -->
 	<!--
@@ -112,73 +112,6 @@
 		<div class="accordion_part">
 			<ol class="pallet-code block connect-area accordion_ol">
 
-				<!-- start panel -->
-				<h7 class="accordion h_icon">整列</h7>
-				<div class="accordion_part">
-					<ol class="pallet-code block connect-area accordion_ol">
-
-						<li class="alclass-block">
-							<div class="block-body">
-								中央
-							</div>
-							<div class="code-body">
-								%content~center
-							</div>
-						</li>
-
-						<li class="alclass-block">
-							<div class="block-body">
-								右寄せ
-							</div>
-							<div class="code-body">
-								%content~right
-							</div>
-						</li>
-
-						<li class="alclass-block">
-							<div class="block-body">
-								左寄せ
-							</div>
-							<div class="code-body">
-								%content~left
-							</div>
-						</li>
-
-						<li class="alclass-block">
-							<div class="block-body">
-								右寄せ
-							</div>
-							<div class="code-body">
-								%content~right
-							</div>
-						</li>
-
-						<li class="alclass-block">
-							<div class="block-body">
-								上寄せ
-							</div>
-							<div class="code-body">
-								%slide~top
-							</div>
-						</li>
-
-						<li class="alclass-block">
-							<div class="block-body">
-								下寄せ
-							</div>
-							<div class="code-body">
-								slide~bottom
-							</div>
-						</li>
-
-
-
-
-
-					</ol>
-				</div>
-				<!-- end panel -->
-				<br>
 				<!-- start panel -->
 				<h7 class="accordion h_icon">【うら】</h7>
 				<div class="accordion_part">
@@ -501,6 +434,197 @@
 			</ol>
 		</div>
 		<!-- end panel -->
+
+<h6 class="accordion h_icon">画像</h6>
+<div class="accordion_part">
+	<ol class="pallet-code block connect-area accordion_ol">
+
+	<li class="var-block">
+		<div class="block-body">
+			画像
+		</div>
+		<div class="code-body">
+			[img
+		</div>
+
+		<div class="block-body">
+			<span class="exp-body item1">URL</span>
+		</div>
+		<div class="code-body">
+			 src="<span class="exp-body item1">独自コード( []記法にて書くこと)</span>"
+		</div>
+
+		<div class="block-body">
+			効果
+		</div>
+		<div class="code-body">
+			 class="
+		</div>
+		<ol>
+			<li class="var-block">
+				<div class="block-body">
+					サイズ<span class="exp-body item1">100</span>
+				</div>
+				<div class="code-body">
+					size~<span class="exp-body item1">100</span>
+				</div>
+			</li>
+
+		</ol>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			 "
+		</div>
+
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			]
+		</div>
+	</li>
+
+	</ol>
+</div>
+
+<!-- start panel -->
+	<h6 class="accordion h_icon">パーツ効果</h6>
+	<div class="accordion_part">
+		<ol class="pallet-code block connect-area accordion_ol">
+
+			<!-- start panel -->
+			<h7 class="accordion h_icon">整列</h7>
+			<div class="accordion_part">
+				<ol class="pallet-code block connect-area accordion_ol">
+
+					<li class="alclass-block">
+						<div class="block-body">
+							中央寄せ
+						</div>
+						<div class="code-body">
+							%content~center
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							右寄せ
+						</div>
+						<div class="code-body">
+							%content~right
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							左寄せ
+						</div>
+						<div class="code-body">
+							%content~left
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							右寄せ
+						</div>
+						<div class="code-body">
+							%content~right
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							上寄せ
+						</div>
+						<div class="code-body">
+							%slide~top
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							下寄せ
+						</div>
+						<div class="code-body">
+							slide~bottom
+						</div>
+					</li>
+
+
+
+
+
+				</ol>
+			</div>
+			<!-- end panel -->
+
+
+			<li class="var-block">
+				<div class="block-body">
+					サイズ<span class="exp-body item1">100</span>
+				</div>
+				<div class="code-body">
+					size~<span class="exp-body item1">100</span>
+				</div>
+			</li>
+
+			<li class="if-block">
+				<div class="block-body">
+					グリッド
+				</div>
+				<div class="code-body">
+					[div class="grid"]
+				</div>
+				<ol>
+					<li class="if-block">
+						<div class="block-body">
+							列
+						</div>
+						<div class="code-body">
+							[div class="column"]
+						</div>
+					<ol>
+					</ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-div]
+						</div>
+					</li>
+
+				</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li>
+
+			<li class="if-block">
+				<div class="block-body">
+					列
+				</div>
+				<div class="code-body">
+					[div class="column"]
+				</div>
+			<ol>
+			</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li>
+
+
+
+		</ol>
+	</div>
+<!-- end panel -->
+
+
+
 
 		<!-- start panel -->
 		<h6 class="accordion h_icon">読み込み</h6>
