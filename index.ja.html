@@ -199,22 +199,7 @@
 
 	});
 
-	var initPosition = $("toolbox").offset().top;
-    $(window).scroll(function() {
-    var scroll = $(document).scrollTop();
-
-    // 移動後ポジション
-    var movePosition = initPosition + scroll + "px";
-    $("toolbox").animate({
-        top : movePosition
-    }, {
-        duration : 500,
-        queue : false
-    });
-
-    });
-
-
+	
 
 	</script>
 
