@@ -2971,22 +2971,12 @@ a.trash:hover {
 /** colored by Flat-UI's color swatches **/
 /** http://designmodo.github.io/Flat-UI/ **/
 
-.wrapper {
-  background-color: #ccc;
-  padding: 300px;
-  height: 200vh;
-  width: 200vw;
-}
-.sticky {
-  background-color: #009688;
-  width: 50vw;
-  height: 50vh;
-  position: -webkit-sticky; /* Safariに対応する */
-  position: sticky; /* 要素を固定/解除する */
-  top: 0; /* 縦方向の閾値 */
-  left: 0; /* 横方向の閾値 */
-}
 
+#toolbox {
+    position: sticky; /* スクロールしても固定表示したい */
+    top: 0; /* 画面上部の位置で固定 */
+    background-color: red;
+}
 
 
 /* Basic */
