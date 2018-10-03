@@ -2244,8 +2244,24 @@ max-width: 100%;
 height:auto;
 }
 
-.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
-.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}
+.clear{
+  clear:both;
+  display:block;
+  overflow:hidden;
+  visibility:hidden;
+  width:0;
+  height:0
+}
+
+.clearfix:after{
+  clear:both;
+  content:' ';
+  display:block;
+  font-size:0;
+  line-height:0;
+  visibility:hidden;
+  width:0;height:0
+}
 * html .clearfix, *:first-child+html .clearfix{zoom:1}
 
 /* Viewable Grids
@@ -3279,5 +3295,16 @@ display:block;
 #toolbox {
     position: sticky; /* スクロールしても固定表示したい */
     top: 0; /* 画面上部の位置で固定 */
-    background-color: red;
+    background-color: white;
+    height: 300px;
+}
+
+
+.grid {
+
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
 }
