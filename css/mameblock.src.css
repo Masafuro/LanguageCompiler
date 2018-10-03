@@ -3292,13 +3292,13 @@ display:block;
 
 /* masafuro made */
 
-#toolbox {
-    position: sticky; /* スクロールしても固定表示したい */
-    top: 0; /* 画面上部の位置で固定 */
-    background-color: white;
-    height: 300px;
-}
 
+#toolbox {
+  position: sticky; /* スクロールしても固定表示したい */
+  top: 30px; /* 画面上部の位置で固定 */
+  background-color: white;
+  height: 300px;
+}
 
 .grid {
 
@@ -3307,4 +3307,9 @@ display:block;
   -webkit-flex-direction: row;
   flex-direction: row;
 
+}
+
+.tabs {
+  position: sticky; /* スクロールしても固定表示したい */
+  top: 0; /* 画面上部の位置で固定 */
 }
