@@ -2972,18 +2972,13 @@ a.trash:hover {
 /** http://designmodo.github.io/Flat-UI/ **/
 
 
-#toolbox {
-    position: sticky; /* スクロールしても固定表示したい */
-    top: 0; /* 画面上部の位置で固定 */
-    background-color: red;
-}
-
 
 /* Basic */
 .basic-block {
 	background-color: #dedede; /* Asbestos */
 	color: rgb(61, 61, 61);
 }
+
 
 .class-block {
 	background-color: #10ebeb; /* Asbestos */
@@ -3276,4 +3271,13 @@ padding:30px 0;
 border:5px solid #ddd;
 margin:30px 0;
 display:block;
+}
+
+
+/* masafuro made */
+
+#toolbox {
+    position: sticky; /* スクロールしても固定表示したい */
+    top: 0; /* 画面上部の位置で固定 */
+    background-color: red;
 }
