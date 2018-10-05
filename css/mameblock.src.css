@@ -3313,3 +3313,10 @@ display:block;
   position: sticky; /* スクロールしても固定表示したい */
   top: 0; /* 画面上部の位置で固定 */
 }
+
+#trashcan {
+  position: sticky; /* スクロールしても固定表示したい */
+  top: 0px; /* 画面上部の位置で固定 */
+  background-color: white;
+  height: 80px;
+}

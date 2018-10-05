@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- META -->
+	<title>Language Compiler from MameBlock</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+
+	<!-- Web CSS -->
+<!--
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/css/mameblock.src.css" media="all" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/css/highlight_default.css" media="all" />
+-->
+	<!-- Local css-->
+	<link rel="stylesheet" type="text/css" href="css/mameblock.src.css" media="all">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/highlight_default.css" media="all">
+
+
+
+
+</head>
+<body class="">
+
+	<div class="grid">
+		<div class="col_12 column" style="margin-top:60px;">
+			<h3 style="display:inline;">Language Compiler</h3>
+			<p>for Webslides.</p>
+		<div class="clear">&nbsp;</div><hr>
+		<div class="col_12 column">
+			<!-- Tabs Left -->
+			<ul class="tabs left">
+				<li class="first current"><a href="#tabr1">ブロック</a></li>
+				<li id="code_tab" class=""><a href="#tabr2">コード</a></li>
+				<li id="download_tab"><a id="download" href="blob:file:///3d0e99cf-94ea-4c2c-939b-d6be623a346d" download="test.html">スライド出力</a></li>
+				<li id="save_tab" class="last"><a id="save" href="#" download="save.html">ブロック保存</a></li>
+
+			</ul>
+			<div id="tabr1" class="tab-content clearfix" style="display: block;">
+				<div id="loading_area"><div class="grid">
+
+	<!-- start of side-toolbox -->
+	<!-- Rules of HTMLtags [ = < , [- = </ , ] = >  , ~ = - ,% = 改行を防ぐ, %% = 空白-->
+
+	<!-- start panel -->
+	<!--
+		<h6 class="accordion h_icon">コード</h6>
+		<div class="accordion_part">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+			<li class="var-block">
+				<div class="block-body">
+					<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+				</div>
+				<div class="code-body">
+					<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+				</div>
+			</li>
+
+			</ol>
+		</div>
+	-->
+	<!-- end panel -->
+
+	<!-- end panel -->
+
+	<div class="col_2" id="toolbox">
+		<!-- start panel -->
+		<h6 class="accordion h_icon">スライド</h6>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+
+				<li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+						[section
+					</div>
+					<ol>
+
+						<li class="basic-block"> <!--スライド効果 -->
+							<div class="block-body">
+								スライド効果
+							</div>
+							<div class="code-body">class="</div>
+							<ol>
+
+							</ol>
+							<div class="block-body">
+
+							</div>
+							<div class="code-body">"]</div>
+						</li>
+
+								<li class="basic-block">
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[div
+									</div>
+									<ol>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ効果
+											</div>
+											<div class="code-body">class="wrap </div>
+											<ol>
+
+											</ol>
+											<div class="block-body">
+
+											</div>
+											<div class="code-body">"]</div>
+										</li>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ
+											</div>
+											<div class="code-body">
+											</div>
+											<ol>
+
+											</ol>
+										</li>
+									</ol>
+
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">
+										[-div]
+									</div>
+								</li>
+
+							</ol>
+
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-section]
+					</div>
+				</li>
+
+			</ol>
+		</div>
+		<!-- end panel -->
+
+
+		<h6 class="accordion h_icon open">スライド効果</h6>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<!-- start panel -->
+				<h7 class="accordion h_icon open">【背景】</h7>
+				<div class="accordion_part" style="display: block;">
+					<ol class="pallet-code block connect-area accordion_ol">
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】白
+							</div>
+							<div class="code-body">
+								bg~white
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】黒
+							</div>
+							<div class="code-body">
+								bg~black
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】apple風
+							</div>
+							<div class="code-body">
+								bg~apple
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】灰色
+							</div>
+							<div class="code-body">
+								bg~gray
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】赤
+							</div>
+							<div class="code-body">
+								bg~red
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】緑
+							</div>
+							<div class="code-body">
+								bg~green
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】紺
+							</div>
+							<div class="code-body">
+								bg~blue
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】紫
+							</div>
+							<div class="code-body">
+								bg~purple
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】黒 透過
+							</div>
+							<div class="code-body">
+								bg~trans~dark
+							</div>
+						</li>
+
+						<li class="bgclass-block">
+							<div class="block-body">
+								【背景】灰 透過
+							</div>
+							<div class="code-body">
+								bg~trans~light
+							</div>
+						</li>
+
+					</ol>
+				</div>
+
+				<br>
+
+						<h7 class="accordion h_icon">アニメーション</h7>
+						<div class="accordion_part" style="display: none;">
+							<ol class="pallet-code block connect-area accordion_ol">
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										浮きでて入る
+									</div>
+									<div class="code-body">
+										fadeIn
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										浮き出て上がる
+									</div>
+									<div class="code-body">
+										fadeInUp
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										広がって入る
+									</div>
+									<div class="code-body">
+										zoomIn
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										左から入る
+									</div>
+									<div class="code-body">
+										slideInLeft
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										右から入る
+									</div>
+									<div class="code-body">
+										slideInRight
+									</div>
+								</li>
+
+								<li class="bgclass-block">
+									<div class="block-body">
+										おそく
+									</div>
+									<div class="code-body">
+										slow
+									</div>
+								</li>
+
+							</ol>
+						</div>
+
+				<!-- end panel-->
+			</ol>
+		</div>
+		<!-- end panel -->
+
+		<!-- start panel -->
+		<h6 class="accordion h_icon">文字</h6>
+		<div class="accordion_part" style="display: block;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<h7 class="accordion h_icon open">文字種類</h7>
+				<div class="accordion_part" style="display: block;">
+					<ol class="pallet-code block connect-area accordion_ol">
+
+						<li class="if-block">
+							<div class="block-body">
+								p <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[p]<span class="exp-body item1"></span>[-p]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1"></span>[-h1]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								h2<span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[h2]<span class="exp-body item1"></span>[-h2]
+							</div>
+						</li>
+
+
+						<li class="if-block">
+							<div class="block-body">
+								h3 <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[h3]<span class="exp-body item1"></span>[-h3]
+							</div>
+						</li>
+
+					</ol>
+				</div>
+
+				<br>
+
+				<h7 class="accordion h_icon">文字効果</h7>
+				<div class="accordion_part" style="display: none;">
+					<ol class="pallet-code block connect-area accordion_ol">
+
+						<li class="if-block">
+							<div class="block-body">
+								太字 <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[strong]<span class="exp-body item1"></span>[-strong]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								箇条書き（ 1. ）
+							</div>
+							<div class="code-body">
+								[ol]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1"></span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1"></span>[-li]
+									</div>
+								</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ol]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								箇条書き（ ・ ）
+							</div>
+							<div class="code-body">
+								[ul]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1"></span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1"></span>[-li]
+									</div>
+								</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ul]
+							</div>
+						</li>
+
+						<li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1"></span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1"></span>[-li]
+							</div>
+						</li>
+
+					</ol>
+				</div>
+
+
+
+
+
+				<li class="if-block">
+					<div class="block-body">
+						区切り線
+					</div>
+					<div class="code-body">
+						[hr]
+					</div>
+				</li>
+
+				<li class="if-block">
+					<div class="block-body">
+						改行
+					</div>
+					<div class="code-body">
+						[br]
+					</div>
+				</li>
+
+
+			</ol>
+		</div>
+		<!-- end panel -->
+
+<h6 class="accordion h_icon">画像</h6>
+<div class="accordion_part" style="display: none;">
+	<ol class="pallet-code block connect-area accordion_ol">
+
+	<li class="var-block">
+		<div class="block-body">
+			画像
+		</div>
+		<div class="code-body">
+			[img
+		</div>
+
+		<div class="block-body">
+			<span class="exp-body item1">URL</span>
+		</div>
+		<div class="code-body">
+			 src="<span class="exp-body item1">URL</span>"
+		</div>
+
+		<div class="block-body">
+			効果
+		</div>
+		<div class="code-body">
+			 class="
+		</div>
+		<ol>
+			<li class="var-block">
+				<div class="block-body">
+					サイズ<span class="exp-body item1">100</span>
+				</div>
+				<div class="code-body">
+					size~<span class="exp-body item1">100</span>
+				</div>
+			</li>
+
+		</ol>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			 "
+		</div>
+
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			]
+		</div>
+	</li>
+
+	<li class="var-block">
+		<div class="block-body">
+			背景画像<span class="exp-body item1">URL</span>（スライド効果の後にいれる）
+		</div>
+		<div class="code-body">
+			[span style="background-image:url('<span class="exp-body item1">URL</span>')"
+		</div>
+		<div class="block-body">
+				背景効果
+		</div>
+		<div class="code-body">
+			class="
+		</div>
+		<ol>
+			<li class="bgclass-block">
+				<div class="block-body">
+					【背景効果】なし
+				</div>
+				<div class="code-body">
+					%background
+				</div>
+			</li>
+		</ol>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			"
+		</div>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			][-span]
+		</div>
+	</li>
+
+	<li class="bgclass-block">
+		<div class="block-body">
+			【背景効果】なし
+		</div>
+		<div class="code-body">
+			%background
+		</div>
+	</li>
+
+	<li class="bgclass-block">
+		<div class="block-body">
+			【背景効果】背景色 透過
+		</div>
+		<div class="code-body">
+			%background dark
+		</div>
+	</li>
+
+	<li class="bgclass-block">
+		<div class="block-body">
+			【背景効果】やや透過
+		</div>
+		<div class="code-body">
+			%background light
+		</div>
+	</li>
+
+
+
+
+	</ol>
+</div>
+
+<!-- start panel -->
+	<h6 class="accordion h_icon">パーツ効果</h6>
+	<div class="accordion_part" style="display: none;">
+		<ol class="pallet-code block connect-area accordion_ol">
+
+			<li class="alclass-block">
+				<div class="block-body">
+					データ
+				</div>
+				<div class="code-body">
+					text~data
+				</div>
+			</li>
+
+			<!-- start panel -->
+			<h7 class="accordion h_icon open">整列</h7>
+			<div class="accordion_part" style="display: block;">
+				<ol class="pallet-code block connect-area accordion_ol">
+
+					<li class="alclass-block">
+						<div class="block-body">
+							中央寄せ
+						</div>
+						<div class="code-body">
+							%content~center
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							右寄せ
+						</div>
+						<div class="code-body">
+							%content~right
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							左寄せ
+						</div>
+						<div class="code-body">
+							%content~left
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							右寄せ
+						</div>
+						<div class="code-body">
+							%content~right
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							上寄せ
+						</div>
+						<div class="code-body">
+							%slide~top
+						</div>
+					</li>
+
+					<li class="alclass-block">
+						<div class="block-body">
+							下寄せ
+						</div>
+						<div class="code-body">
+							slide~bottom
+						</div>
+					</li>
+
+
+
+
+
+				</ol>
+			</div>
+			<!-- end panel -->
+
+
+			<li class="var-block">
+				<div class="block-body">
+					サイズ<span class="exp-body item1">100</span>
+				</div>
+				<div class="code-body">
+					size~<span class="exp-body item1">100</span>
+				</div>
+			</li>
+
+			<li class="if-block">
+				<div class="block-body">
+					グリッド
+				</div>
+				<div class="code-body">
+					[div class="grid"]
+				</div>
+				<ol>
+					<li class="if-block">
+						<div class="block-body">
+							列
+						</div>
+						<div class="code-body">
+							[div class="column"]
+						</div>
+					<ol>
+					</ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-div]
+						</div>
+					</li>
+
+				</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li>
+
+			<li class="if-block">
+				<div class="block-body">
+					列
+				</div>
+				<div class="code-body">
+					[div class="column"]
+				</div>
+			<ol>
+			</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li>
+
+
+
+		</ol>
+	</div>
+<!-- end panel -->
+
+
+
+
+		<!-- start panel -->
+		<h6 class="accordion h_icon">読み込み</h6>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="loop-block">
+					<div class="block-body">
+						css読み込み<span class="exp-body item1">url</span>
+					</div>
+					<div class="code-body">
+						[link rel="stylesheet" type='text/css' media='all' href="<span class="exp-body item1"></span>"]
+					</div>
+				</li>
+
+				<li class="loop-block">
+					<div class="block-body">
+						javascript読み込み<span class="exp-body item1">url</span>
+					</div>
+					<div class="code-body">
+						[script type="text/javascript" src="<span class="exp-body item1"></span>"][-script]
+					</div>
+				</li>
+
+			</ol>
+		</div>
+		<!-- end panel -->
+		<!-- start panel -->
+		<h6 class="accordion h_icon">コード</h6>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="var-block">
+					<div class="block-body">
+						<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+					</div>
+					<div class="code-body">
+						<span class="exp-body item1">独自コード( []記法にて書くこと)</span>
+					</div>
+				</li>
+
+				<li class="var-block">
+					<div class="block-body">
+						<span class="exp-body item1">コメント（ページの最後にいれる）</span>
+					</div>
+					<div class="code-body">
+						[!-- <span class="exp-body item1">コメント</span> --]
+					</div>
+				</li>
+
+
+
+
+			</ol>
+	</div>
+	<!-- end of side-toolbox -->
+
+	<!-- start panel -->
+		<h6 class="accordion h_icon">ページ設定</h6>
+		<div class="accordion_part" style="display: none;">
+			<ol class="pallet-code block connect-area accordion_ol">
+
+				<li class="start-block">
+					<div class="block-body">
+						スライドゾーン
+					</div>
+					<div class="code-body">
+						[article id="webslides"]
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-article]
+					</div>
+				</li>
+
+				<li class="start-block">
+					<div class="block-body">
+						Webslides はじめにする設定
+					</div>
+					<div class="code-body">
+						[link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet" -] [link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/svg-icons.css"
+						-] [link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/webslides.css" -]
+
+					</div>
+				</li>
+
+
+				<li class="start-block">
+					<div class="block-body">
+						Webslides 最後にする設定
+					</div>
+					<div class="code-body">
+						[script src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"][-script] [script] window.ws = new WebSlides(); [-script] [script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"][-script]
+					</div>
+				</li>
+
+				<li class="loop-block">
+					<div class="block-body">
+						HTMLをはじめる
+					</div>
+					<div class="code-body">
+						[!DOCTYPE html] [html]
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-html]
+					</div>
+				</li>
+
+				<li class="loop-block">
+					<div class="block-body">
+						初期設定
+					</div>
+					<div class="code-body">
+						[head]
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-head]
+					</div>
+				</li>
+
+				<li class="loop-block">
+					<div class="block-body">
+						内容
+					</div>
+					<div class="code-body">
+						[body]
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-body]
+					</div>
+				</li>
+
+				<li class="loop-block">
+					<div class="block-body">
+						言語<span class="exp-body item1">ja</span>
+					</div>
+					<div class="code-body">
+						[html lang="<span class="exp-body item1">ja</span>"]
+					</div>
+				</li>
+
+
+				<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+				<li class="loop-block">
+					<div class="block-body">
+						IE互換
+					</div>
+					<div class="code-body">
+						[meta http-equiv="X-UA-Compatible" content="IE=edge"]
+					</div>
+				</li>
+
+				<!-- <meta charset="utf-8"> -->
+				<li class="loop-block">
+					<div class="block-body">
+						文字コード<span class="exp-body item1">utf-8</span>
+					</div>
+					<div class="code-body">
+						[meta charset="<span class="exp-body item1">utf-8</span>"]
+					</div>
+				</li>
+
+				<!-- <title></title> -->
+				<li class="loop-block">
+					<div class="block-body">
+						<span class="exp-body item1">タイトル</span>
+					</div>
+					<div class="code-body">
+						[title]<span class="exp-body item1">タイトル</span>[-title]
+					</div>
+				</li>
+
+				<!-- <meta name="description" content="">  -->
+
+				<li class="loop-block">
+					<div class="block-body">
+						<span class="exp-body item1">ページの説明</span>
+					</div>
+					<div class="code-body">
+						[meta name="desscription" content="<span class="exp-body item1">ページの説明</span>"]
+					</div>
+				</li>
+
+				<!-- <meta name="author" content=""> -->
+				<li class="loop-block">
+					<div class="block-body">
+						<span class="exp-body item1">作者名</span>
+					</div>
+					<div class="code-body">
+						[meta name="author" content="<span class="exp-body item1">作者名</span>"]
+					</div>
+				</li>
+
+
+
+
+
+			</ol>
+		</div>
+	<!-- end panel -->
+
+
+</div>
+<!-- end block area -->
+
+	<!-- Main edit area -->
+	<div class="col_9">
+		<ol class="block connect-area serialize">
+
+			<li class="loop-block">
+				<div class="block-body">
+					HTMLをはじめる
+				</div>
+				<div class="code-body">
+					[!DOCTYPE html] [html]
+				</div>
+				<ol>
+					<li class="loop-block">
+						<div class="block-body">
+							初期設定
+						</div>
+						<div class="code-body">
+							[head]
+						</div>
+						<ol>
+							<li class="loop-block">
+								<div class="block-body">
+									言語<span class="exp-body item1">ja</span>
+								</div>
+								<div class="code-body">
+									[html lang="<span class="exp-body item1">ja</span>"]
+								</div>
+							</li>
+							<li class="loop-block">
+								<div class="block-body">
+									IE互換
+								</div>
+								<div class="code-body">
+									[meta http-equiv="X-UA-Compatible" content="IE=edge"]
+								</div>
+							</li>
+
+							<!-- <meta charset="utf-8"> -->
+							<li class="loop-block">
+								<div class="block-body">
+									文字コード<span class="exp-body item1">utf-8</span>
+								</div>
+								<div class="code-body">
+									[meta charset="<span class="exp-body item1">utf-8</span>"]
+								</div>
+							</li>
+
+							<!-- <title></title> -->
+							<li class="loop-block">
+								<div class="block-body">
+									<span class="exp-body item1">タイトル</span>
+								</div>
+								<div class="code-body">
+									[title]<span class="exp-body item1">タイトル</span>[-title]
+								</div>
+							</li>
+
+							<!-- <meta name="description" content="">  -->
+
+							<li class="loop-block">
+								<div class="block-body">
+									<span class="exp-body item1">ページの説明</span>
+								</div>
+								<div class="code-body">
+									[meta name="desscription" content="<span class="exp-body item1">ページの説明</span>"]
+								</div>
+							</li>
+
+							<!-- <meta name="author" content=""> -->
+							<li class="loop-block">
+								<div class="block-body">
+									<span class="exp-body item1">作者名</span>
+								</div>
+								<div class="code-body">
+									[meta name="author" content="<span class="exp-body item1">作者名</span>"]
+								</div>
+							</li>
+							<li class="basic-block">
+								<div class="block-body">
+									Webslides はじめにする設定
+								</div>
+								<div class="code-body">
+									[link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet"-] [link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/svg-icons.css"-]
+									[link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/webslides.css"-]
+								</div>
+							</li>
+
+						</ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-head]
+						</div>
+					</li>
+
+					<li class="loop-block">
+						<div class="block-body">
+							内容
+						</div>
+						<div class="code-body">
+							[body]
+						</div>
+						<ol>
+							<li class="basic-block">
+								<div class="block-body">
+									スライドゾーン
+								</div>
+								<div class="code-body">
+									[article id="webslides"]
+								</div>
+								<ol>
+									<li class="basic-block">
+										<div class="block-body">
+											ページ
+										</div>
+										<div class="code-body">
+											[section
+										</div>
+										<ol>
+
+											<li class="basic-block"> <!--スライド効果 -->
+												<div class="block-body">
+													スライド効果
+												</div>
+												<div class="code-body">class="</div>
+												<ol>
+
+												<li class="bgclass-block">
+							<div class="block-body">
+								【背景】白
+							</div>
+							<div class="code-body">
+								bg~white
+							</div>
+						</li></ol>
+												<div class="block-body">
+
+												</div>
+												<div class="code-body">"]</div>
+											</li>
+
+													<li class="basic-block">
+														<div class="block-body">
+														</div>
+														<div class="code-body">
+															[div
+														</div>
+														<ol>
+															<li class="basic-block">
+																<div class="block-body">
+																	パーツ効果
+																</div>
+																<div class="code-body">class="wrap </div>
+																<ol>
+
+																<li class="alclass-block">
+						<div class="block-body">
+							中央寄せ
+						</div>
+						<div class="code-body">
+							%content~center
+						</div>
+					</li></ol>
+																<div class="block-body">
+
+																</div>
+																<div class="code-body">"]</div>
+															</li>
+															<li class="basic-block">
+																<div class="block-body">
+																	パーツ
+																</div>
+																<div class="code-body">
+																</div>
+																<ol>
+
+																<li class="var-block">
+		<div class="block-body">
+			画像
+		</div>
+		<div class="code-body">
+			[img
+		</div>
+
+		<div class="block-body">
+			<span class="exp-body item1">logo.png</span>
+		</div>
+		<div class="code-body">
+			 src="<span class="exp-body item1">logo.png</span>"
+		</div>
+
+		<div class="block-body">
+			効果
+		</div>
+		<div class="code-body">
+			 class="
+		</div>
+		<ol>
+			<li class="var-block">
+				<div class="block-body">
+					サイズ<span class="exp-body item1">100</span>
+				</div>
+				<div class="code-body">
+					size~<span class="exp-body item1">100</span>
+				</div>
+			</li>
+
+		</ol>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			 "
+		</div>
+
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			]
+		</div>
+	</li><li class="if-block">
+					<div class="block-body">
+						改行
+					</div>
+					<div class="code-body">
+						[br]
+					</div>
+				</li><li class="if-block">
+					<div class="block-body">
+						改行
+					</div>
+					<div class="code-body">
+						[br]
+					</div>
+				</li><li class="if-block">
+					<div class="block-body">
+						改行
+					</div>
+					<div class="code-body">
+						[br]
+					</div>
+				</li><li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">起業と社長</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">起業と社長</span>[-h1]
+							</div>
+						</li></ol>
+															</li>
+														</ol>
+
+														<div class="block-body">
+
+														</div>
+														<div class="code-body">
+															[-div]
+														</div>
+													</li>
+
+												</ol>
+
+										<div class="block-body">
+										</div>
+										<div class="code-body">
+											[-section]
+										</div>
+									</li><li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+						[section
+					</div>
+					<ol>
+
+						<li class="basic-block"> <!--スライド効果 -->
+							<div class="block-body">
+								スライド効果
+							</div>
+							<div class="code-body">class="</div>
+							<ol>
+
+							<li class="bgclass-block">
+							<div class="block-body">
+								【背景】apple風
+							</div>
+							<div class="code-body">
+								bg~apple
+							</div>
+						</li></ol>
+							<div class="block-body">
+
+							</div>
+							<div class="code-body">"]</div>
+						</li>
+
+								<li class="basic-block">
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[div
+									</div>
+									<ol>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ効果
+											</div>
+											<div class="code-body">class="wrap </div>
+											<ol>
+
+											<li class="alclass-block">
+						<div class="block-body">
+							中央寄せ
+						</div>
+						<div class="code-body">
+							%content~center
+						</div>
+					</li></ol>
+											<div class="block-body">
+
+											</div>
+											<div class="code-body">"]</div>
+										</li>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ
+											</div>
+											<div class="code-body">
+											</div>
+											<ol>
+
+											<li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">起業</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">起業</span>[-h1]
+							</div>
+						</li></ol>
+										</li>
+									</ol>
+
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">
+										[-div]
+									</div>
+								</li>
+
+							</ol>
+
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-section]
+					</div>
+				</li><li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+						[section
+					</div>
+					<ol>
+
+						<li class="basic-block"> <!--スライド効果 -->
+							<div class="block-body">
+								スライド効果
+							</div>
+							<div class="code-body">class="</div>
+							<ol>
+
+							<li class="bgclass-block">
+							<div class="block-body">
+								【背景】白
+							</div>
+							<div class="code-body">
+								bg~white
+							</div>
+						</li></ol>
+							<div class="block-body">
+
+							</div>
+							<div class="code-body">"]</div>
+						</li>
+
+								<li class="basic-block">
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[div
+									</div>
+									<ol>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ効果
+											</div>
+											<div class="code-body">class="wrap </div>
+											<ol>
+
+											</ol>
+											<div class="block-body">
+
+											</div>
+											<div class="code-body">"]</div>
+										</li>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ
+											</div>
+											<div class="code-body">
+											</div>
+											<ol>
+
+											<li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">古川幹洋</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">古川幹洋</span>[-h1]
+							</div>
+						</li><li class="if-block">
+					<div class="block-body">
+						区切り線
+					</div>
+					<div class="code-body">
+						[hr]
+					</div>
+				</li><li class="if-block">
+				<div class="block-body">
+					グリッド
+				</div>
+				<div class="code-body">
+					[div class="grid"]
+				</div>
+				<ol>
+					<li class="if-block">
+						<div class="block-body">
+							列
+						</div>
+						<div class="code-body">
+							[div class="column"]
+						</div>
+					<ol>
+					<li class="if-block">
+							<div class="block-body">
+								箇条書き（ ・ ）
+							</div>
+							<div class="code-body">
+								[ul]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1">三川内中学校</span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1">三川内中学校</span>[-li]
+									</div>
+								</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">佐世保高専 機械工学科</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">佐世保高専 機械工学科</span>[-li]
+							</div>
+						</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">京都工芸繊維大学 デザイン経営工学科</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">京都工芸繊維大学 デザイン経営工学科</span>[-li]
+							</div>
+						</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">JAIST 知識科学研究科</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">JAIST 知識科学研究科</span>[-li]
+							</div>
+						</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ul]
+							</div>
+						</li></ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-div]
+						</div>
+					</li><li class="if-block">
+				<div class="block-body">
+					列
+				</div>
+				<div class="code-body">
+					[div class="column"]
+				</div>
+			<ol>
+			<li class="if-block">
+							<div class="block-body">
+								箇条書き（ ・ ）
+							</div>
+							<div class="code-body">
+								[ul]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1">風力発電ベンチャー ENE-DREAM 経営企画室</span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1">風力発電ベンチャー ENE-DREAM 経営企画室</span>[-li]
+									</div>
+								</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">起業 RATTO-OFFICE ベンチャー向け試作開発</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">起業 RATTO-OFFICE ベンチャー向け試作開発</span>[-li]
+							</div>
+						</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">古川企画 (ｲﾏｺｺ)</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">古川企画 (ｲﾏｺｺ)</span>[-li]
+							</div>
+						</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ul]
+							</div>
+						</li></ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li>
+
+				</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li></ol>
+										</li>
+									</ol>
+
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">
+										[-div]
+									</div>
+								</li>
+
+							</ol>
+
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-section]
+					</div>
+				</li><li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+						[section
+					</div>
+					<ol>
+
+						<li class="basic-block"> <!--スライド効果 -->
+							<div class="block-body">
+								スライド効果
+							</div>
+							<div class="code-body">class="</div>
+							<ol>
+
+							<li class="bgclass-block">
+							<div class="block-body">
+								【背景】白
+							</div>
+							<div class="code-body">
+								bg~white
+							</div>
+						</li></ol>
+							<div class="block-body">
+
+							</div>
+							<div class="code-body">"]</div>
+						</li>
+
+								<li class="var-block">
+		<div class="block-body">
+			背景画像<span class="exp-body item1">https://www.pakutaso.com/shared/img/thumb/tokyo0720IMGL6861_TP_V4.jpg</span>（スライド効果の後にいれる）
+		</div>
+		<div class="code-body">
+			[span style="background-image:url('<span class="exp-body item1">https://www.pakutaso.com/shared/img/thumb/tokyo0720IMGL6861_TP_V4.jpg</span>')"
+		</div>
+		<div class="block-body">
+				背景効果
+		</div>
+		<div class="code-body">
+			class="
+		</div>
+		<ol>
+			<li class="bgclass-block">
+		<div class="block-body">
+			【背景効果】背景色 透過
+		</div>
+		<div class="code-body">
+			%background dark
+		</div>
+	</li>
+		</ol>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			"
+		</div>
+		<div class="block-body">
+		</div>
+		<div class="code-body">
+			][-span]
+		</div>
+	</li><li class="basic-block">
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[div
+									</div>
+									<ol>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ効果
+											</div>
+											<div class="code-body">class="wrap </div>
+											<ol>
+
+											<li class="alclass-block">
+						<div class="block-body">
+							中央寄せ
+						</div>
+						<div class="code-body">
+							%content~center
+						</div>
+					</li></ol>
+											<div class="block-body">
+
+											</div>
+											<div class="code-body">"]</div>
+										</li>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ
+											</div>
+											<div class="code-body">
+											</div>
+											<ol>
+
+											<li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">社長</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">社長</span>[-h1]
+							</div>
+						</li></ol>
+										</li>
+									</ol>
+
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">
+										[-div]
+									</div>
+								</li>
+
+							</ol>
+
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-section]
+					</div>
+				</li><li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+						[section
+					</div>
+					<ol>
+
+						<li class="basic-block"> <!--スライド効果 -->
+							<div class="block-body">
+								スライド効果
+							</div>
+							<div class="code-body">class="</div>
+							<ol>
+
+							<li class="bgclass-block">
+							<div class="block-body">
+								【背景】白
+							</div>
+							<div class="code-body">
+								bg~white
+							</div>
+						</li></ol>
+							<div class="block-body">
+
+							</div>
+							<div class="code-body">"]</div>
+						</li>
+
+								<li class="basic-block">
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[div
+									</div>
+									<ol>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ効果
+											</div>
+											<div class="code-body">class="wrap </div>
+											<ol>
+
+											</ol>
+											<div class="block-body">
+
+											</div>
+											<div class="code-body">"]</div>
+										</li>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ
+											</div>
+											<div class="code-body">
+											</div>
+											<ol>
+
+											<li class="if-block">
+							<div class="block-body">
+								h3 <span class="exp-body item1">2018/10/4 長崎新聞 水や雲 "五島産業汽船"</span>
+							</div>
+							<div class="code-body">
+								[h3]<span class="exp-body item1">2018/10/4 長崎新聞 水や雲 "五島産業汽船"</span>[-h3]
+							</div>
+						</li><li class="if-block">
+					<div class="block-body">
+						区切り線
+					</div>
+					<div class="code-body">
+						[hr]
+					</div>
+				</li><li class="if-block">
+				<div class="block-body">
+					グリッド
+				</div>
+				<div class="code-body">
+					[div class="grid"]
+				</div>
+				<ol>
+					<li class="if-block">
+						<div class="block-body">
+							列
+						</div>
+						<div class="code-body">
+							[div class="column"]
+						</div>
+					<ol>
+					<li class="if-block">
+							<div class="block-body">
+								箇条書き（ ・ ）
+							</div>
+							<div class="code-body">
+								[ul]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1">五島産業汽船が全航路の運行を停止した。</span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1">五島産業汽船が全航路の運行を停止した。</span>[-li]
+									</div>
+								</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">五島列島、長崎市、佐世保市を航路で結んでいた。</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">五島列島、長崎市、佐世保市を航路で結んでいた。</span>[-li]
+							</div>
+						</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">九州商船も運行しているが、便数は減るし佐世保ー五島間の便はなくなる。</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">九州商船も運行しているが、便数は減るし佐世保ー五島間の便はなくなる。</span>[-li]
+							</div>
+						</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">観光に影響がでる、不便になると不安が広がっている。</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">観光に影響がでる、不便になると不安が広がっている。</span>[-li]
+							</div>
+						</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ul]
+							</div>
+						</li></ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-div]
+						</div>
+					</li><li class="if-block">
+				<div class="block-body">
+					列
+				</div>
+				<div class="code-body">
+					[div class="column"]
+				</div>
+			<ol>
+			<li class="if-block">
+							<div class="block-body">
+								箇条書き（ ・ ）
+							</div>
+							<div class="code-body">
+								[ul]
+							</div>
+							<ol>
+								<li class="if-block">
+									<div class="block-body">
+										・ <span class="exp-body item1">船の修理費などがかさみ経営悪化したらしい。</span>
+									</div>
+									<div class="code-body">
+										[li]<span class="exp-body item1">船の修理費などがかさみ経営悪化したらしい。</span>[-li]
+									</div>
+								</li><li class="if-block">
+							<div class="block-body">
+								・ <span class="exp-body item1">いきなりの運休や廃止はいかがなものか。航路を要する人も急に解雇された従業員もやりきれないだろう。</span>
+							</div>
+							<div class="code-body">
+								[li]<span class="exp-body item1">いきなりの運休や廃止はいかがなものか。航路を要する人も急に解雇された従業員もやりきれないだろう。</span>[-li]
+							</div>
+						</li>
+							</ol>
+							<div class="block-body">
+							</div>
+							<div class="code-body">
+								[-ul]
+							</div>
+						</li></ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li>
+
+				</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-div]
+				</div>
+			</li></ol>
+										</li>
+									</ol>
+
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">
+										[-div]
+									</div>
+								</li>
+
+							</ol>
+
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-section]
+					</div>
+				</li><li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+						[section
+					</div>
+					<ol>
+
+						<li class="basic-block"> <!--スライド効果 -->
+							<div class="block-body">
+								スライド効果
+							</div>
+							<div class="code-body">class="</div>
+							<ol>
+
+							<li class="bgclass-block">
+							<div class="block-body">
+								【背景】apple風
+							</div>
+							<div class="code-body">
+								bg~apple
+							</div>
+						</li></ol>
+							<div class="block-body">
+
+							</div>
+							<div class="code-body">"]</div>
+						</li>
+
+								<li class="basic-block">
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[div
+									</div>
+									<ol>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ効果
+											</div>
+											<div class="code-body">class="wrap </div>
+											<ol>
+
+											<li class="alclass-block">
+						<div class="block-body">
+							中央寄せ
+						</div>
+						<div class="code-body">
+							%content~center
+						</div>
+					</li></ol>
+											<div class="block-body">
+
+											</div>
+											<div class="code-body">"]</div>
+										</li>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ
+											</div>
+											<div class="code-body">
+											</div>
+											<ol>
+
+											<li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">あなたが社長なら</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">あなたが社長なら</span>[-h1]
+							</div>
+						</li><li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">どうする？</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">どうする？</span>[-h1]
+							</div>
+						</li></ol>
+										</li>
+									</ol>
+
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">
+										[-div]
+									</div>
+								</li>
+
+							</ol>
+
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-section]
+					</div>
+				</li>
+
+								</ol>
+								<div class="block-body">
+								</div>
+								<div class="code-body">
+									[-article]
+								</div>
+							</li>
+
+							<li class="basic-block">
+								<div class="block-body">
+									Webslides 最後にする設定
+								</div>
+								<div class="code-body">
+									[script src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"][-script] [script] window.ws = new WebSlides(); [-script] [script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"][-script]
+								</div>
+						</li></ol>
+						<div class="block-body">
+						</div>
+						<div class="code-body">
+							[-body]
+						</div>
+						</li>
+
+
+				</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					[-html]
+				</div>
+				</li>
+
+
+		</ol>
+	</div>
+	<!-- end of Main edit area -->
+
+	<!-- trash-can -->
+	<div class="col_1" id="trashcan">
+		<a class="trash" href="#" onclick="MAME_BLOCK.clearTrash()" alt="trash"></a>
+		<ol id="trash-can" class="trash-code block connect-area"><li class="if-block">
+					<div class="block-body">
+						改行
+					</div>
+					<div class="code-body">
+						[br]
+					</div>
+				</li><li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">社長なら</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">社長なら</span>[-h1]
+							</div>
+						</li><li class="bgclass-block">
+							<div class="block-body">
+								【背景】灰色
+							</div>
+							<div class="code-body">
+								bg~gray
+							</div>
+						</li><li class="bgclass-block">
+							<div class="block-body">
+								【背景】黒
+							</div>
+							<div class="code-body">
+								bg~black
+							</div>
+						</li><li class="bgclass-block">
+							<div class="block-body">
+								【背景】黒
+							</div>
+							<div class="code-body">
+								bg~black
+							</div>
+						</li><li class="alclass-block">
+						<div class="block-body">
+							中央寄せ
+						</div>
+						<div class="code-body">
+							%content~center
+						</div>
+					</li><li class="basic-block">
+					<div class="block-body">
+						ページ
+					</div>
+					<div class="code-body">
+						[section
+					</div>
+					<ol>
+
+						<li class="basic-block"> <!--スライド効果 -->
+							<div class="block-body">
+								スライド効果
+							</div>
+							<div class="code-body">class="</div>
+							<ol>
+
+							</ol>
+							<div class="block-body">
+
+							</div>
+							<div class="code-body">"]</div>
+						</li>
+
+								<li class="basic-block">
+									<div class="block-body">
+									</div>
+									<div class="code-body">
+										[div
+									</div>
+									<ol>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ効果
+											</div>
+											<div class="code-body">class="wrap </div>
+											<ol>
+
+											</ol>
+											<div class="block-body">
+
+											</div>
+											<div class="code-body">"]</div>
+										</li>
+										<li class="basic-block">
+											<div class="block-body">
+												パーツ
+											</div>
+											<div class="code-body">
+											</div>
+											<ol>
+
+											<li class="if-block">
+							<div class="block-body">
+								h1 <span class="exp-body item1">ふともも</span>
+							</div>
+							<div class="code-body">
+								[h1]<span class="exp-body item1">ふともも</span>[-h1]
+							</div>
+						</li></ol>
+										</li>
+									</ol>
+
+									<div class="block-body">
+
+									</div>
+									<div class="code-body">
+										[-div]
+									</div>
+								</li>
+
+							</ol>
+
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						[-section]
+					</div>
+				</li></ol>
+	</div>
+	<!-- end of trash-can -->
+
+</div>
+<!-- End of grid -->
+</div>
+			</div>
+			<div id="tabr2" class="tab-content clearfix" style="display: none;">
+				<pre id="exampleArea" class="prettyprint">&lt;!DOCTYPE html&gt;&lt;html&gt;
+&lt;head&gt;
+&lt;html lang = "ja"&gt;
+&lt;meta http - equiv = "X-UA-Compatible"
+    content = "IE=edge"
+&gt;
+&lt;meta charset = "utf-8"&gt;
+&lt;title&gt; タイトル&lt;/title&gt;
+    &lt;meta name = "desscription"
+        content = "ページの説明"
+    &gt;
+    &lt;meta name = "author"
+        content = "作者名"
+    &gt;
+    &lt;link href = "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+        rel = "stylesheet" -
+    &gt;&lt;link rel = "stylesheet"
+        type = 'text/css'
+        media = 'all'
+        href = "https://cdn.rawgit.com/webslides/WebSlides/master/static/css/svg-icons.css" -
+    &gt;
+    &lt;link rel = "stylesheet"
+        type = 'text/css'
+        media = 'all'
+        href = "https://cdn.rawgit.com/webslides/WebSlides/master/static/css/webslides.css" -
+    &gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;article id = "webslides"&gt;
+    &lt;section
+        class = "
+        bg-white "&gt; &lt;div
+            class = "wrap   content-center "&gt; &lt;img
+                src = "logo.png"
+                class = "
+                size-100 "
+            &gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;h1&gt; 起業と社長&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;section
+                class = "
+                bg-apple "&gt; &lt;div
+                    class = "wrap   content-center "&gt; &lt;h1&gt; 起業&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;/section&gt;
+                    &lt;section
+                        class = "
+                        bg-white "&gt; &lt;div
+                            class = "wrap "
+                        &gt;
+                        &lt;h1&gt; 古川幹洋&lt;/h1&gt;
+                        &lt;hr&gt;
+                        &lt;div class = "grid"&gt;
+                        &lt;div class = "column"&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt; 三川内中学校&lt;/li&gt;
+                        &lt;li&gt; 佐世保高専 機械工学科&lt;/li&gt;
+                        &lt;li&gt; 京都工芸繊維大学 デザイン経営工学科&lt;/li&gt;
+                        &lt;li&gt; JAIST 知識科学研究科&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;div class = "column"&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt; 風力発電ベンチャー ENE - DREAM 経営企画室&lt;/li&gt;
+                        &lt;li&gt; 起業 RATTO - OFFICE ベンチャー向け試作開発&lt;/li&gt;
+                        &lt;li&gt; 古川企画(ｲﾏｺｺ)&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;/section&gt;
+                        &lt;section
+                            class = "
+                            bg-white "&gt; &lt;span style = "background-image:url('https://www.pakutaso.com/shared/img/thumb/tokyo0720IMGL6861_TP_V4.jpg')"
+                                class = "  background dark "
+                            &gt;&lt;/span&gt;
+                            &lt;div
+                                class = "wrap   content-center "&gt; &lt;h1&gt; 社長&lt;/h1&gt;
+                                &lt;/div&gt;
+                                &lt;/section&gt;
+                                &lt;section
+                                    class = "
+                                    bg-white "&gt; &lt;div
+                                        class = "wrap "
+                                    &gt;
+                                    &lt;h3&gt; 2018 / 10 / 4 長崎新聞 水や雲 "五島産業汽船" &lt;/h3&gt;
+                                    &lt;hr&gt;
+                                    &lt;div class = "grid"&gt;
+                                    &lt;div class = "column"&gt;
+                                    &lt;ul&gt;
+                                    &lt;li&gt; 五島産業汽船が全航路の運行を停止した。&lt;/li&gt;
+                                    &lt;li&gt; 五島列島、 長崎市、 佐世保市を航路で結んでいた。&lt;/li&gt;
+                                    &lt;li&gt; 九州商船も運行しているが、 便数は減るし佐世保ー五島間の便はなくなる。&lt;/li&gt;
+                                    &lt;li&gt; 観光に影響がでる、 不便になると不安が広がっている。&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class = "column"&gt;
+                                    &lt;ul&gt;
+                                    &lt;li&gt; 船の修理費などがかさみ経営悪化したらしい。&lt;/li&gt;
+                                    &lt;li&gt; いきなりの運休や廃止はいかがなものか。 航路を要する人も急に解雇された従業員もやりきれないだろう。&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;/section&gt;
+                                    &lt;section
+                                        class = "
+                                        bg-apple "&gt; &lt;div
+                                            class = "wrap   content-center "&gt; &lt;h1&gt; あなたが社長なら&lt;/h1&gt;
+                                            &lt;h1&gt; どうする？&lt;/h1&gt;
+                                            &lt;/div&gt;
+                                            &lt;/section&gt;
+                                            &lt;/article&gt;
+                                            &lt;script src = "https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"&gt;&lt;/script&gt;&lt;script&gt; window.ws = new WebSlides();
+                                            &lt;/script&gt;&lt;script defer src = "https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"&gt;&lt;/script&gt;
+                                            &lt;/body&gt;
+                                            &lt;/html&gt;</pre>
+			</div>
+
+			<div class="clear">&nbsp;</div><hr>
+
+		<div class="col_12 column" id="footer">
+			Language Compiler : Copyright 2018 FurukawaKikaku All Rights Reserved.
+			Mameblock : Copyright 2015 Yutaka Kachi All Rights Reserved.
+		</div>
+	</div> <!-- End Grid -->
+
+	<!-- edit dialog -->
+    <div id="modal-window">
+		<a id="editor_close" href="#">[Close]</a>
+		<div id="loading_area"></div>
+    </div>
+	<!-- express dialog -->
+	<div id="modal-express" style="display: none; position: absolute; z-index: 76; left: 50%; top: 3242px; margin-left: -337px; margin-top: -51.5px;">
+		<div class="modal-body">
+			<label for="expModalText">Edit expression</label><br>
+			<input id="expModalText" type="text" size="10">
+		</div>
+		<a class="modal_close" href="#">[OK]</a>
+	</div>
+
+	<!-- Web Javascript -->
+	<!--
+	<script type="text/javascript" src="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/js/mameblock.src.js"></script>
+-->
+	<!-- Local Javascript -->
+	<script type="text/javascript" src="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/Masafuro/LanguageCompiler/master/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="js/mameblock.src.js"></script>
+
+
+
+	<script type="text/javascript">
+
+	$(function() {
+		<!-- # Init -->
+		var codeArea = $("#exampleArea");
+		var codeText = MAME_BLOCK.init("#loading_area", "mameBlock_template.ja.html");
+		/* wait for DOM building */
+		var wait0 = setTimeout(function() {
+			setCode(MAME_BLOCK.getCodeBlock(), codeArea);
+		}, 500);
+
+
+		$("#mameRun").click(function() {
+			<!-- get code -->
+			var codeText = MAME_BLOCK.getCodeBlock();
+			setCode(codeText, codeArea);
+			var mameExec = new Function(codeText);
+			mameExec();
+		});
+
+
+		$("#code_tab").click(function() {
+			setCode(MAME_BLOCK.getCodeBlock(), codeArea);
+		});
+
+		function compile(code){
+
+			code = code.replace( /\[\-/g, '</');
+			code = code.replace( /\%/g, '');
+			code = code.replace( /\[/g, '<');
+			code = code.replace( /\]/g, '>');
+			code = code.replace( /\~/g, '-');
+
+			return code;
+		};
+
+
+		function setCode(code, codeArea) {
+
+			code = compile(code);
+
+			codeArea.text(code);
+			codeArea.each(function(i, block) {
+				//hljs.highlightBlock(block);
+			});
+		};
+
+		function setCode2(code, codeArea) {
+
+			code = compile(code);
+
+			codeArea.text(code);
+			codeArea.each(function(i, block) {
+				//hljs.highlightBlock(block);
+			});
+			return code;
+		};
+
+		$("#download_tab").click(function() {
+
+								 var content = setCode2(MAME_BLOCK.getCodeBlock(), codeArea);
+								 var blob = new Blob([ content ], { "type" : "text/plain" });
+
+								 if (window.navigator.msSaveBlob) {
+										 window.navigator.msSaveBlob(blob, "test.html");
+
+										 // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+										 window.navigator.msSaveOrOpenBlob(blob, "test.html");
+								 } else {
+										 document.getElementById("download").href = window.URL.createObjectURL(blob);
+								 }
+						 });
+
+		 $("#save_tab").click(function() {
+
+			 (function() {
+			   // <html> を clone
+			   var html = document.getElementsByTagName('html')[0].cloneNode(true);
+
+			   // href や src に指定されたURLを絶対パスに変換
+/*
+			   var nodes = html.querySelectorAll('[href],[src]');
+			   for (var i=0, n=nodes.length; i<n; i++) {
+			     if (nodes[i].href) { nodes[i].href=nodes[i].href; }
+			     if (nodes[i].src) { nodes[i].src=nodes[i].src; }
+
+			     console.log('href: ' + nodes[i].href + ', src: ' + nodes[i].src);
+			   }
+*/
+
+			   // ソースコードをテキストで取得
+			   var src = html.innerHTML;
+			   console.log(src.slice(0, 5000));
+
+			   // 上記の src には DOCTYPE が含まれていないので別途用意
+			   var name     = document.doctype.name;
+			   var publicId = document.doctype.publicId;
+			   var systemID = document.doctype.systemId;
+			   var doctype  = '<!DOCTYPE ' + name
+			                  + (publicId ? ' PUBLIC "' + publicId + '"' : '')
+			                  + (systemID ? ' "' + systemID + '"' : '')
+			                  + '>';
+			   console.log(doctype);
+
+			   // <html> タグを再構成
+			   var htmlTag = '<html';
+			   var attrs = html.attributes;
+			   for (var i=0, n=attrs.length; i<n; i++) {
+			     var attr = attrs[i];
+			     htmlTag += ' ' + attr.nodeName + (attr.nodeValue ? '="' + attr.nodeValue + '"' : '');
+			   }
+			   htmlTag += '>';
+			   console.log(htmlTag);
+
+			   // ソースコードを Blob オブジェクトに変換してURLを取得
+			   var blob    = new Blob([doctype, '\n', htmlTag, '\n', src, '\n</html>']);
+			   var url     = window.URL || window.webkitURL;
+			   var blobURL = url.createObjectURL(blob);
+
+			   // <a> を新たに作成し、ダウンロード用の設定をいろいろ
+			   var a = document.createElement('a');
+			   // URI を元にダウンロード時のファイル名を決定
+			   a.download = decodeURI(location.pathname+location.hash).replace(/\//g,'__').replace(/#/g,'--') + '.html';
+			   a.href     = blobURL;
+
+			   a.click();
+			 })();
+
+		 });
+
+
+	});
+
+
+
+	</script>
+
+
+
+</div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div class="lean-overlay" style="display: none; position: fixed; z-index: 75; top: 0px; left: 0px; height: 100%; width: 100%; background: rgb(0, 0, 0); opacity: 0.5; overflow: auto;"></div></body>
+</html>
