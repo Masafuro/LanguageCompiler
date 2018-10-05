@@ -3317,6 +3317,6 @@ display:block;
 #trashcan {
   position: sticky; /* スクロールしても固定表示したい */
   top: 0px; /* 画面上部の位置で固定 */
-  background-color: red;
+  background-color: white;
   height: 80px;
 }
