@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <html lang="ja">
+  <meta http - equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <title> タイトル</title>
+  <meta name="desscription" content="ページの説明">
+  <meta name="author" content="作者名">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i7CMaitree:200,300,400,600,700&subset=latin-ext" rel="stylesheet" ->
+  <link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/svg-icons.css" ->
+  <link rel="stylesheet" type='text/css' media='all' href="https://cdn.rawgit.com/webslides/WebSlides/master/static/css/webslides.css" ->
+</head>
+
+<body>
+  <article id="webslides">
+    <section class="">
+      <div class="wrap ">
+        <h1> page loaded</h1>
+      </div>
+    </section>
+    <section class="" id="t1"></section>
+  </article>
+  <template id="temp1">
+    <div class = "wrap">
+    <h1> temp1 loaded</h1>
+    </div>
+  </template>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var template = document.getElementById('temp1');
+      var clone = document.importNode(template.content, true);
+      document.getElementById('t1').appendChild(clone);
+       alert('END DOM');
+    });
+  </script>
+  <script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"></script>
+  <script>
+    window.onload = function() {
+      window.ws = new WebSlides();
+    };
+  </script>
+  <script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"></script>
+</body>
+
+</html>

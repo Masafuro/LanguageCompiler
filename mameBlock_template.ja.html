@@ -31,7 +31,7 @@
 		<div class="accordion_part">
 			<ol class="pallet-code block connect-area accordion_ol">
 
-
+<!--
 				<li class="basic-block">
 					<div class="block-body">
 						ページ
@@ -41,7 +41,7 @@
 					</div>
 					<ol>
 
-						<li class="basic-block"> <!--スライド効果 -->
+						<li class="basic-block">
 							<div class="block-body">
 								スライド効果
 							</div>
@@ -103,6 +103,7 @@
 						[-section]
 					</div>
 				</li>
+-->
 
 				<li class="var-block">
 					<div class="block-body">
@@ -131,55 +132,110 @@
 
 			<li class="var-block">
 				<div class="block-body">
-					スライド<span class="exp-body item1">ID名</span> 呼び出し
+					ページ設置 <span class="exp-body item1">名前</span>
 				</div>
 				<div class="code-body">
-					[section id="<span class="exp-body item1">ID名</span>"
+					[section id="<span class="exp-body item1">名前</span>"
+				</div>
+				<ol>
+					<div class="block-body">
+					 スライド効果
+					</div>
+					<div class="code-body">
+						class="
+					</div>
+					<ol>
+					</ol>
+					<div class="block-body">
+					</div>
+					<div class="code-body">
+						"
+					</div>
+				</ol>
+				<div class="block-body">
+				</div>
+				<div class="code-body">
+					][-section]
+				</div>
+			</li>
+
+
+			<li class="var-block">
+				<div class="block-body">
+					ページ中身 <span class="exp-body item1">名前</span>
+				</div>
+				<div class="code-body">
+					[template id="p<span class="exp-body item1">名前</span>"]
 				</div>
 				<ol>
 					<li class="basic-block">
 						<div class="block-body">
-					スライド効果
-					</div>
-					<div class="code-body">class="</div>
-					<ol>
+						</div>
+						<div class="code-body">
+							[div
+						</div>
+						<ol>
+							<li class="basic-block">
+								<div class="block-body">
+									パーツ効果
+								</div>
+								<div class="code-body">class="wrap </div>
+								<ol>
 
-					</ol>
-					<div class="block-body">
+								</ol>
+								<div class="block-body">
 
-					</div>
-					<div class="code-body">"]</div>
-				</li>
+								</div>
+								<div class="code-body">"]</div>
+							</li>
+							<li class="basic-block">
+								<div class="block-body">
+									パーツ
+								</div>
+								<div class="code-body">
+								</div>
+								<ol>
+
+								</ol>
+							</li>
+						</ol>
+
+						<div class="block-body">
+
+						</div>
+						<div class="code-body">
+							[-div]
+						</div>
+					</li>
 
 				</ol>
 				<div class="block-body">
 				</div>
 				<div class="code-body">
-					[-section]
+					[-template]
 				</div>
+				<ol>
+					<li class="var-block">
+						<div class="block-body">
+							ページ設置 <span class="exp-body item1">名前</span>
+						</div>
+						<div class="code-body">
+							[script]
+							document.addEventListener('DOMContentLoaded', function() {
+							var ID = 'p'+'<span class="exp-body item1">名前</span>';
+							var template = document.getElementById(ID);
+							var clone = document.importNode(template.content, true);
+							document.getElementById('<span class="exp-body item1">名前</span>').appendChild(clone);});
+							[-script]
+						</div>
+					</li>
 
+				</ol>
 			</li>
 
-			<li class="var-block">
-				<div class="block-body">
-					<span class="exp-body item1">ID名</span> 内容
-				</div>
-				<div class="code-body">
-					[script]
-					document.addEventListener('DOMContentLoaded', function() {
-					var elm = document.getElementById("<span class="exp-body item1">ID名</span>");
-					elm.innerHTML = '%
 
-				</div>
-					<ol>
-					</ol>
-				<div class="block-body">
-				</div>
-				<div class="code-body">
-					%' });
-					[-script]
-				</div>
-			</li>
+
+
 
 
 			</ol>
@@ -1183,7 +1239,13 @@
 									Webslides 最後にする設定
 								</div>
 								<div class="code-body">
-									[script src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"][-script] [script] window.ws = new WebSlides(); [-script] [script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"][-script]
+									[script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/webslides.min.js"][-script]
+									[script]
+									 window.onload = function() {
+										 window.ws = new WebSlides();
+									 };
+									[-script]
+									[script defer src="https://cdn.rawgit.com/webslides/WebSlides/master/static/js/svg-icons.js"][-script]
 								</div>
 						</ol>
 						<div class="block-body">
