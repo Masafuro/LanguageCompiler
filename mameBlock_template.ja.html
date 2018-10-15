@@ -163,6 +163,13 @@
 					ページ中身 <span class="exp-body item1">名前</span>
 				</div>
 				<div class="code-body">
+					[script]
+					document.addEventListener('DOMContentLoaded', function() {
+					var ID = 'p'+'<span class="exp-body item1">名前</span>';
+					var template = document.getElementById(ID);
+					var clone = document.importNode(template.content, true);
+					document.getElementById('<span class="exp-body item1">名前</span>').appendChild(clone);});
+					[-script]
 					[template id="p<span class="exp-body item1">名前</span>"]
 				</div>
 				<ol>
@@ -212,23 +219,6 @@
 				<div class="code-body">
 					[-template]
 				</div>
-				<ol>
-					<li class="var-block">
-						<div class="block-body">
-							ページ設置 <span class="exp-body item1">名前</span>
-						</div>
-						<div class="code-body">
-							[script]
-							document.addEventListener('DOMContentLoaded', function() {
-							var ID = 'p'+'<span class="exp-body item1">名前</span>';
-							var template = document.getElementById(ID);
-							var clone = document.importNode(template.content, true);
-							document.getElementById('<span class="exp-body item1">名前</span>').appendChild(clone);});
-							[-script]
-						</div>
-					</li>
-
-				</ol>
 			</li>
 
 
